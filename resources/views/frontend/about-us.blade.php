@@ -59,6 +59,10 @@ $pageTitle = 'About Us';
 
 @endsection
 
+@section('footer-cta')
+    @include('partials.frontend.footer-cta')
+@endsection
+
 @section('js')
 @endsection
 
