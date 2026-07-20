@@ -9,6 +9,9 @@ use App\Http\Controllers\Frontend\FrontendController AS Frontend;
 //1 - Frontend Routes
 Route::group([ 'prefix' =>'/'], function () {
     Route::get('/', [Frontend::class, 'index'])->name('frontend.homepage');
+    Route::get('/about-us', [Frontend::class, 'aboutUs'])->name('frontend.aboutUs');
+    Route::get('/services', [Frontend::class, 'services'])->name('frontend.services');
+    Route::get('/our-standard', [Frontend::class, 'ourStandard'])->name('frontend.ourStandard');
 });
 
 Route::get('/dashboard', function () {

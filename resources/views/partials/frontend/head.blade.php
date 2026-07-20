@@ -61,23 +61,91 @@
 
     .bg-gradient-2{
         background: #001E46;
-        background: linear-gradient(90deg,rgba(0, 30, 70, 1) 0%, rgba(152, 2, 11, 1) 100%);
+        background: linear-gradient(90deg,rgba(0, 30, 70, 1) 0%, rgba(0, 30, 70, 1) 25%, rgba(151, 1, 10, 0.96) 89%);
     }
 
     .s-item-img-area{
         position: relative;
     }
-    /*.s-item-img-overlay{
+    .s-item-img-overlay{
         position: absolute;
         width: 100%;
-        height: 40%;
+        height: 80%;
         top: 0;
         left: 0;
         z-index: 1;
         background: #001E46;
-        background: linear-gradient(180deg,rgba(0, 30, 70, 1) 0%, rgba(151, 1, 10, 1) 50%);
-        opacity: 0.6;
-    }*/
+        background: linear-gradient(180deg,rgba(0, 30, 70, 1) 0%, rgba(0, 30, 70, 1) 25%, rgba(151, 1, 10, 0.96) 72%, rgba(151, 1, 10, 0) 100%);
+        opacity: 1;
+        padding: 20px 10px 10px;
+    }
+
+    .counter-item-text-top{
+        font-size: 26px;
+    }
+
+    .counter-item-text-bottom{
+        font-size: inherit;
+    }
+
+    .counter-item-1,
+    .counter-item-2,
+    .counter-item-3{
+        /*border-right: 1px solid #444444;*/
+        border-right: none;
+    }
+
+    .counter-item-image-area{
+        padding: 0 0 0 20px;
+    }
+
+    .fw-medium{
+        font-weight: 500;
+    }
+
+    .footer-banner-item-text-top{
+        font-size: 20px;
+    }
+
+    .footer-banner-item-text-bottom{
+        font-size: inherit;
+    }
+
+    .footer-other-links{
+        display: flex;
+        list-style: none;
+        justify-content: space-between;
+    }
+
+    @media only screen and (max-width: 480px) {
+
+        .counter-item-1,
+        .counter-item-2,
+        .counter-item-3{
+            border: none;
+        }
+
+        .footer-social-icons{
+            text-align: center;
+        }
+
+        .footer-other-links{
+            justify-content: space-evenly;
+        }
+
+        .counter-item-image-area{
+            padding: 0 5px 0 10px;
+        }
+
+        .counter-item-text-top{
+            font-size: 18px;
+        }
+
+        .counter-item-text-bottom{
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
 
 </style>
 
