@@ -1635,7 +1635,7 @@
 	}
 	.site-header .navbar-nav.nav-style > li > a,
 	.site-header .is-fixed .navbar-nav.nav-style > li > a{
-		padding: 8px 0;
+		padding: 8px 10px;
 	}
 	.mo-left .header-curve .logo-header img {
 		margin-top: 0;

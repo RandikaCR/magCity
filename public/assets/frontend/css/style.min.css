@@ -3172,7 +3172,7 @@ blockquote:before {
     }
     .header-nav .nav {
         float: none;
-        margin: 0;
+        margin: 20px 0 0 0;
         background: #fff;
 		width: 100%;
 		display: block;
@@ -3424,8 +3424,8 @@ blockquote:before {
 /*header style 1 (default) */
 /*header style 2 (center content) */
 .header-nav .nav.nav-style > li > a{
-	padding: 12px 12px 10px;
-    border-radius: 5px;
+	padding: 10px 12px 12px;
+    border-radius: 4px;
 }
 .header-nav .nav.nav-style > li,
 .is-fixed .header-nav .nav.nav-style > li{
