@@ -50,12 +50,27 @@
     jQuery(document).ready(function() {
         'use strict';
         dz_rev_slider_1();
-    });	/*ready*/
+    });
+
+    function numberCounter(){
+        $('.count').each(function () {
+            $(this).prop('Counter',0).animate({
+                Counter: $(this).text()
+            }, {
+                duration: 2000,
+                easing: 'swing',
+                step: function (now) {
+                    $num = Math.ceil(now).toLocaleString('en-US')
+                    $(this).text($num);
+                }
+            });
+        });
+    }
 </script>
 
 <script>
     $(document).ready(function (){
-
+        numberCounter();
     });
 
 </script>

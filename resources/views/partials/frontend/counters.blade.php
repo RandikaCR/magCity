@@ -7,7 +7,7 @@
                         <img class="img-fluid" src="{{ asset('assets/common/images/icon-1.png') }}" alt="">
                     </div>
                     <div class="col-9 col-sm-10">
-                        <p class="mb-0 fw-bold counter-item-text-top">20,000+</p>
+                        <p class="mb-0 fw-bold counter-item-text-top"><span class="count">20000</span>+</p>
                         <p class="mb-0 counter-item-text-bottom">Warranty Registered Vehicles</p>
                     </div>
                 </div>
@@ -18,7 +18,7 @@
                         <img class="img-fluid" src="{{ asset('assets/common/images/icon-2.png') }}" alt="">
                     </div>
                     <div class="col-9 col-sm-10">
-                        <p class="mb-0 fw-bold counter-item-text-top">8+ LOCATIONS</p>
+                        <p class="mb-0 fw-bold counter-item-text-top"><span class="count">8</span>+ LOCATIONS</p>
                         <p class="mb-0 counter-item-text-bottom">Across Sri Lanka</p>
                     </div>
                 </div>
@@ -29,7 +29,7 @@
                         <img class="img-fluid" src="{{ asset('assets/common/images/icon-3.png') }}" alt="">
                     </div>
                     <div class="col-9 col-sm-10">
-                        <p class="mb-0 fw-bold counter-item-text-top">100,000+</p>
+                        <p class="mb-0 fw-bold counter-item-text-top"><span class="count">100000</span>+</p>
                         <p class="mb-0 counter-item-text-bottom">Vehicles Serviced Monthly</p>
                     </div>
                 </div>
@@ -40,7 +40,7 @@
                         <img class="img-fluid" src="{{ asset('assets/common/images/icon-4.png') }}" alt="">
                     </div>
                     <div class="col-9 col-sm-10">
-                        <p class="mb-0 fw-bold counter-item-text-top">5 YEAR</p>
+                        <p class="mb-0 fw-bold counter-item-text-top"><span class="count">5</span> YEAR</p>
                         <p class="mb-0 counter-item-text-bottom">Warranty Programme</p>
                     </div>
                 </div>
