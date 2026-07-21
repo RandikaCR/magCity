@@ -54,10 +54,12 @@
 
     function numberCounter(){
         $('.count').each(function () {
+            $count = $(this).data('count');
+            $duration = $(this).data('timer');
             $(this).prop('Counter',0).animate({
-                Counter: $(this).text()
+                Counter: $count
             }, {
-                duration: 2000,
+                duration: $duration,
                 easing: 'swing',
                 step: function (now) {
                     $num = Math.ceil(now).toLocaleString('en-US')
@@ -66,11 +68,25 @@
             });
         });
     }
+
+    $(window).on('scroll', function() {
+        var targetDiv = $('#counters-section');
+
+        if (targetDiv.length) {
+            //var divPosition = targetDiv.offset().top;
+            var divPosition = 300;
+            var scrollPosition = $(window).scrollTop();
+
+            if (scrollPosition >= divPosition) {
+                numberCounter();
+            }
+        }
+    });
 </script>
 
 <script>
     $(document).ready(function (){
-        numberCounter();
+
     });
 
 </script>
