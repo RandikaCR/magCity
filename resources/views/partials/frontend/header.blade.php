@@ -35,13 +35,15 @@
                     <ul class="nav navbar-nav nav-style">
                         <li class="{{ (request()->segment(1) == '') ? 'active' : '' }}"><a href="{{ url('/') }}">Home</a></li>
                         <li class="{{ (request()->segment(1) == 'services') ? 'active' : '' }}"><a href="{{ url('/services') }}">Services</a></li>
-                        <li class="{{ (request()->segment(1) == 'our-standard') ? 'active' : '' }}"><a href="{{ url('/our-standard') }}">Our Standard</a></li>
+                        {{--<li class="{{ (request()->segment(1) == 'our-standard') ? 'active' : '' }}"><a href="{{ url('/our-standard') }}">Our Standard</a></li>--}}
                         <li class="{{ (request()->segment(1) == 'branches') ? 'active' : '' }}"><a href="javascript:void(0);">Branches</a></li>
                         <li class="{{ (request()->segment(1) == 'warranty') ? 'active' : '' }}"><a href="javascript:void(0);">Warranty</a></li>
                         <li class="{{ (request()->segment(1) == 'about-us') ? 'active' : '' }}"><a href="{{ url('/about-us') }}">About Us</a></li>
                         <li class="{{ (request()->segment(1) == 'news') ? 'active' : '' }}"><a href="javascript:void(0);">News</a></li>
                         <li class="{{ (request()->segment(1) == 'contact-us') ? 'active' : '' }}"><a href="javascript:void(0);">Contact Us</a></li>
                     </ul>
+
+                    <a href="https://new.magcitysys.com/book" target="_blank" class="site-button-secondry button-skew z-index1 ms-4 text-uppercase d-none d-lg-block">Book Online</a>
                 </div>
             </div>
         </div>

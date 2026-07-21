@@ -3882,6 +3882,7 @@ blockquote:before {
 /* next pre btn */
 .owl-none .owl-nav{
 	/*display:none;*/
+    margin-top: 20px;
     display: flex;
     justify-content: center;
 }

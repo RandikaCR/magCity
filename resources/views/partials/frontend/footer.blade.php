@@ -13,7 +13,7 @@
                 </div>
                 <div class="col-lg-7 col-md-12 col-sm-12 footer-col-4">
                     <div class="row">
-                        <div class="col-lg-3 col-md-6 col-sm-6 footer-col-4">
+                        <div class="col-lg-4 col-md-6 col-sm-6 footer-col-4">
                             <div class="widget widget_services">
                                 <h4 class="m-b15 text-uppercase">services</h4>
                                 <ul>
@@ -26,7 +26,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-6 col-sm-6 footer-col-4">
+                        {{--<div class="col-lg-3 col-md-6 col-sm-6 footer-col-4">
                             <div class="widget widget_services">
                                 <h4 class="m-b15 text-uppercase">Our Standard</h4>
                                 <ul>
@@ -36,8 +36,8 @@
                                     <li><a href="javascript:void(0);">Warranty Programme</a></li>
                                 </ul>
                             </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-6 footer-col-4">
+                        </div>--}}
+                        <div class="col-lg-4 col-md-6 col-sm-6 footer-col-4">
                             <div class="widget widget_services">
                                 <h4 class="m-b15 text-uppercase">Company</h4>
                                 <ul>
@@ -47,7 +47,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-6 col-sm-6 footer-col-4">
+                        <div class="col-lg-4 col-md-6 col-sm-6 footer-col-4">
                             <div class="widget widget_services">
                                 <h4 class="m-b15 text-uppercase">Support</h4>
                                 <ul>

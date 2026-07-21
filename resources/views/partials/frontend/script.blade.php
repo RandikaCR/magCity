@@ -1,3 +1,6 @@
+@php
+    $rand = rand(1,9999);
+@endphp
 <input type="hidden" id="appUrl" value="{{ url('') }}">
 <script src="{{ asset('assets/frontend/js/jquery.min.js') }}"></script>
 <script src="{{ asset('assets/frontend/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script><!-- BOOTSTRAP.MIN JS -->
@@ -10,8 +13,8 @@
 <script src="{{ asset('assets/frontend/plugins/masonry/masonry-3.1.4.js') }}"></script><!-- MASONRY -->
 <script src="{{ asset('assets/frontend/plugins/masonry/masonry.filter.js') }}"></script><!-- MASONRY -->
 <script src="{{ asset('assets/frontend/plugins/owl-carousel/owl.carousel.js') }}"></script><!-- OWL SLIDER -->
-<script src="{{ asset('assets/frontend/js/custom.min.js') }}"></script><!-- CUSTOM FUCTIONS  -->
-<script src="{{ asset('assets/frontend/js/dz.carousel.min.js') }}"></script><!-- SORTCODE FUCTIONS  -->
+<script src="{{ asset('assets/frontend/js/custom.min.js?reset=' . $rand) }}"></script><!-- CUSTOM FUCTIONS  -->
+<script src="{{ asset('assets/frontend/js/dz.carousel.min.js?reset=' . $rand) }}"></script><!-- SORTCODE FUCTIONS  -->
 <script src="{{ asset('assets/frontend/plugins/lightgallery/js/lightgallery-all.js') }}"></script><!-- LIGHT GALLERY -->
 <script src="{{ asset('assets/frontend/js/dz.ajax.js') }}"></script><!-- CONTACT JS -->
 <script src="{{ asset('assets/frontend/plugins/switcher/js/switcher.js') }}"></script><!-- SWITCHER -->

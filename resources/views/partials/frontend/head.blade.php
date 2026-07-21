@@ -24,10 +24,13 @@
 <script src="{{ asset('assets/frontend/js/html5shiv.min.js') }}"></script>
 <script src="{{ asset('assets/frontend/js/respond.min.js') }}"></script>
 <![endif]-->
+@php
+$rand = rand(1,9999);
+@endphp
 
 <!-- STYLESHEETS -->
-<link rel="stylesheet" type="text/css" href="{{ asset('assets/frontend/css/style.min.css') }}">
-<link rel="stylesheet" type="text/css" href="{{ asset('assets/frontend/css/templete.min.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('assets/frontend/css/style.min.css?reset=' . $rand) }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('assets/frontend/css/templete.min.css?reset=' . $rand) }}">
 <link class="skin"  rel="stylesheet" type="text/css" href="{{ asset('assets/frontend/css/skin/skin-1.css') }}">
 <!-- Revolution Slider Css -->
 <link rel="stylesheet" type="text/css" href="{{ asset('assets/frontend/plugins/revolution/css/settings.css') }}">
