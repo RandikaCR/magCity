@@ -6,12 +6,17 @@ use Illuminate\Support\Facades\Route;
 //FRONTEND CONTROLLERS
 use App\Http\Controllers\Frontend\FrontendController AS Frontend;
 
+//BACKEND CONTROLLERS
+use App\Http\Controllers\Backend\DashboardController AS BackendDashboard;
+
 //1 - Frontend Routes
 Route::group([ 'prefix' =>'/'], function () {
     Route::get('/', [Frontend::class, 'index'])->name('frontend.homepage');
     Route::get('/about-us', [Frontend::class, 'aboutUs'])->name('frontend.aboutUs');
     Route::get('/services', [Frontend::class, 'services'])->name('frontend.services');
     Route::get('/our-standard', [Frontend::class, 'ourStandard'])->name('frontend.ourStandard');
+
+    Route::post('/app-logout', [Frontend::class, 'appLogout'])->name('frontend.auth.appLogout');
 });
 
 Route::get('/dashboard', function () {
@@ -22,10 +27,10 @@ Route::middleware('auth')->group(function () {
 
 
     //2 - Admin Routes
-    Route::group([ 'prefix' =>'admin'], function () {
+    Route::group([ 'prefix' =>'admin', 'middleware' => ['isAdmin']], function () {
 
         // D
-        // Route::get('/', [BackendDashboard::class, 'index'])->name('backend.dashboard');
+        Route::get('/', [BackendDashboard::class, 'index'])->name('backend.dashboard');
 
     });
 

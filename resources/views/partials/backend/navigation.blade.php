@@ -36,7 +36,7 @@
                     </a>
                 </li>
 
-                <li class="nav-item">
+                {{--<li class="nav-item">
                     <a class="nav-link menu-link" href="#sidebarProducts" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarProducts">
                         <i class="mdi mdi-gift"></i> <span data-key="t-raffles-main">Products</span>
                     </a>
@@ -52,21 +52,6 @@
                     </div>
                 </li>
 
-                <li class="nav-item">
-                    <a class="nav-link menu-link" href="#sidebarLandscapes" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarLandscapes">
-                        <i class="mdi mdi-gift"></i> <span data-key="t-raffles-main">Landscapes</span>
-                    </a>
-                    <div class="collapse menu-dropdown" id="sidebarLandscapes">
-                        <ul class="nav nav-sm flex-column">
-                            <li class="nav-item">
-                                <a href="{{ url('/admin/landscapes') }}" class="nav-link" data-key="t-landscapes">All Landscapes</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="{{ url('/admin/landscapes/create') }}" class="nav-link" data-key="t-landscapes-add">Add New</a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
 
                 <li class="nav-item">
                     <a class="nav-link menu-link" href="{{ url('/admin/machinery-hires') }}">
@@ -74,54 +59,12 @@
                     </a>
                 </li>
 
-                <li class="nav-item">
-                    <a class="nav-link menu-link" href="#sidebarMachineries" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarMachineries">
-                        <i class="mdi mdi-truck-plus"></i> <span data-key="t-raffles-main">Machineries</span>
-                    </a>
-                    <div class="collapse menu-dropdown" id="sidebarMachineries">
-                        <ul class="nav nav-sm flex-column">
-                            <li class="nav-item">
-                                <a href="{{ url('/admin/machineries') }}" class="nav-link" data-key="t-machineries">All Machineries</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="{{ url('/admin/machineries/create') }}" class="nav-link" data-key="t-machineries-add">Add New</a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
+                --}}
 
 
-                <li class="menu-title"><span data-key="t-system">System</span></li>
 
-                <li class="nav-item">
-                    <a class="nav-link menu-link" href="{{ url('/admin/users') }}">
-                        <i class="mdi mdi-store-settings"></i> <span data-key="t-users">Users</span>
-                    </a>
-                </li>
+                {{--<li class="menu-title"><span data-key="t-system">System</span></li>--}}
 
-                <li class="nav-item">
-                    <a class="nav-link menu-link" href="{{ url('/admin/product-categories') }}">
-                        <i class="mdi mdi-store-settings"></i> <span data-key="t-product-categories">Product Categories</span>
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link menu-link" href="{{ url('/admin/machinery-categories') }}">
-                        <i class="mdi mdi-store-settings"></i> <span data-key="t-machinery-categories">Machinery Categories</span>
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link menu-link" href="{{ url('/admin/labels') }}">
-                        <i class="mdi mdi-store-settings"></i> <span data-key="t-labels">Labels</span>
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link menu-link" href="{{ url('/admin/thicknesses') }}">
-                        <i class="mdi mdi-store-settings"></i> <span data-key="t-thicknesses">Thicknesses</span>
-                    </a>
-                </li>
 
             </ul>
         </div>
