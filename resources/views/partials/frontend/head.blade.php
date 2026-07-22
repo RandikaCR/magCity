@@ -39,6 +39,25 @@ $rand = rand(1,9999);
 @yield('css')
 
 <style type="text/css">
+
+    .book-now-button{
+        color: #98020a;
+        background: #fff;
+        font-weight: 700;
+    }
+
+    .news-ticker {
+        list-style: none;
+        overflow: hidden;
+        height: 30px; /* Adjust based on your font size */
+        padding: 0;
+        margin: 0;
+    }
+    .news-ticker li {
+        height: 30px;
+        line-height: 30px;
+    }
+
     .theme-header-border-bottom{
         position: relative;
         margin-top: 5px;

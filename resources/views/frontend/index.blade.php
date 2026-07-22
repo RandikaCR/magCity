@@ -24,7 +24,13 @@
             <div class="section-full">
                 <div class="container">
                     <div class="text-center py-4">
-                        <p class="text-uppercase font-34 text-white mb-0"> Service and Running Repair now in <span class="fw-bold">Galle</span></p>
+                        <ul class="news-ticker">
+                            <li class="text-uppercase font-34 text-white mb-0">Service and Running Repairs now in <span class="fw-bold">Galle</span></li>
+                            <li class="text-uppercase font-34 text-white mb-0">Service and Running Repairs now in <span class="fw-bold">Galle</span></li>
+                            <li class="text-uppercase font-34 text-white mb-0">Service and Running Repairs now in <span class="fw-bold">Galle</span></li>
+                            <li class="text-uppercase font-34 text-white mb-0">Service and Running Repairs now in <span class="fw-bold">Galle</span></li>
+                        </ul>
+                        {{--<p class="text-uppercase font-34 text-white mb-0"> Service and Running Repairs now in <span class="fw-bold">Galle</span></p>--}}
                     </div>
                 </div>
             </div>
@@ -33,10 +39,7 @@
                     <div class="row justify-content-center">
                         <div class="col-sm-3">
                             <div class="blog-post latest-blog-1 date-style-3 skew-date">
-                                <div class="dlab-post-info p-t20">
-                                    <div class="dlab-post-title ">
-                                        <p class="post-title mb-0 font-30" style="color: transparent;">patch</p>
-                                    </div>
+                                <div class="dlab-post-info">
                                     <div class="dlab-post-meta ">
                                         <p class="text-uppercase fw-bold mb-3 text-primary">Our Services</p>
                                     </div>
@@ -46,61 +49,28 @@
                                         <p class="font-14 mb-4">Every vehicle followers a structured process designed around precision, transparency and long-term reliability</p>
                                     </div>
                                 </div>
-                                <div class="dlab-post-media dlab-img-effect zoom-slow">
+                                {{--<div class="dlab-post-media dlab-img-effect zoom-slow">
                                     <a href="javascript:void(0);" class="site-button button-skew z-index1"> <span>Discover our Services</span><i class="fas fa-angle-right"></i> </a>
-                                </div>
+                                </div>--}}
                             </div>
                         </div>
                         <div class="col-sm-9 ps-sm-5 ps-2">
                             <div class="blog-carousel owl-carousel owl-none">
                                 <div class="item text-center">
                                     <div class="blog-post latest-blog-1 date-style-3 skew-date">
-                                        <div class="dlab-post-info p-t20">
-                                            <div class="dlab-post-title ">
-                                                <p class="post-title mb-0 font-30 text-primary">01</p>
-                                            </div>
-                                            <div class="dlab-post-meta ">
-                                                <p class="text-uppercase fw-bold mb-2">Running Repairs</p>
-                                            </div>
-                                            <div class="dlab-post-text os-content">
-                                                <p>Day to day running repairs on all brands of vehicles using genuine parts</p>
-                                            </div>
-                                        </div>
-                                        <div class="dlab-post-media dlab-img-effect zoom-slow"> <a href="javascript:void(0);"><img src="{{ asset('assets/common/images/slider-1.jpg') }}" alt=""></a> </div>
+                                        <div class="dlab-post-media dlab-img-effect zoom-slow"> <a href="javascript:void(0);"><img src="{{ asset('assets/common/images/offer-1.jpg') }}" alt=""></a> </div>
                                     </div>
                                 </div>
 
                                 <div class="item text-center">
                                     <div class="blog-post latest-blog-1 date-style-3 skew-date">
-                                        <div class="dlab-post-info p-t20">
-                                            <div class="dlab-post-title ">
-                                                <p class="post-title mb-0 font-30 text-primary">02</p>
-                                            </div>
-                                            <div class="dlab-post-meta ">
-                                                <p class="text-uppercase fw-bold mb-2">Collision Repairs</p>
-                                            </div>
-                                            <div class="dlab-post-text os-content">
-                                                <p>2K heated booth painting with 3 year warranty on all paint jobs</p>
-                                            </div>
-                                        </div>
-                                        <div class="dlab-post-media dlab-img-effect zoom-slow"> <a href="javascript:void(0);"><img src="{{ asset('assets/common/images/slider-2.jpg') }}" alt=""></a> </div>
+                                        <div class="dlab-post-media dlab-img-effect zoom-slow"> <a href="javascript:void(0);"><img src="{{ asset('assets/common/images/offer-2.jpg') }}" alt=""></a> </div>
                                     </div>
                                 </div>
 
                                 <div class="item text-center">
                                     <div class="blog-post latest-blog-1 date-style-3 skew-date">
-                                        <div class="dlab-post-info p-t20">
-                                            <div class="dlab-post-title ">
-                                                <p class="post-title mb-0 font-30 text-primary">03</p>
-                                            </div>
-                                            <div class="dlab-post-meta">
-                                                <p class="text-uppercase fw-bold mb-2">Full Service</p>
-                                            </div>
-                                            <div class="dlab-post-text os-content">
-                                                <p>Full Service for all brands of vehicles using manufacturer recommended oils</p>
-                                            </div>
-                                        </div>
-                                        <div class="dlab-post-media dlab-img-effect zoom-slow"> <a href="javascript:void(0);"><img src="{{ asset('assets/common/images/slider-3.jpg') }}" alt=""></a> </div>
+                                        <div class="dlab-post-media dlab-img-effect zoom-slow"> <a href="javascript:void(0);"><img src="{{ asset('assets/common/images/offer-3.jpg') }}" alt=""></a> </div>
                                     </div>
                                 </div>
 

@@ -66,7 +66,7 @@
                 easing: 'swing',
                 step: function (now) {
                     $num = Math.ceil(now).toLocaleString('en-US')
-                    $(this).text($num);
+                    $(this).text($num.padStart(2, '0'));
                 }
             });
         });
@@ -89,7 +89,12 @@
 
 <script>
     $(document).ready(function (){
-
+        setInterval(function() {
+            var $firstItem = $('.news-ticker li:first');
+            $firstItem.animate({ height: 0, opacity: 0 }, 600, function() {
+                $(this).remove().css({ height: '30px', opacity: 1 }).appendTo('.news-ticker');
+            });
+        }, 5000);
     });
 
 </script>

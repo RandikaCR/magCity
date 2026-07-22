@@ -5,13 +5,13 @@
     <div class="footer-top">
         <div class="container">
             <div class="row">
-                <div class="col-lg-2 col-md-12 footer-col-4">
-                    <div class="widget widget_about d-flex flex-wrap justify-content-center text-center">
+                <div class="col-lg-3 col-md-12 footer-col-4">
+                    <div class="widget widget_about d-flex flex-wrap justify-content-center text-center px-4">
                         <div class="logo-footer logo-white"><img src="{{ asset('assets/common/images/logo-dark.png') }}" alt=""></div>
                         <p>Precision, Technology and experties come together to deliver the highest standard of automotive care.</p>
                     </div>
                 </div>
-                <div class="col-lg-7 col-md-12 col-sm-12 footer-col-4">
+                <div class="col-lg-6 col-md-12 col-sm-12 footer-col-4">
                     <div class="row">
                         <div class="col-lg-4 col-md-6 col-sm-6 footer-col-4">
                             <div class="widget widget_services">
@@ -69,17 +69,10 @@
                     </div>
                     <div class="widget widget_about footer-social-icons">
                         <ul class="dlab-social-icon dez-border">
-                            <li><a class="fab fa-facebook-f" href="javascript:void(0);" target="blank"></a></li>
+                            <li><a class="fab fa-facebook-f" href="https://www.facebook.com/magcitycolombo/" target="blank"></a></li>
                             <li><a class="fab fa-whatsapp" href="javascript:void(0);" target="blank" ></a></li>
-                            <li><a class="fab fa-instagram" href="javascript:void(0);" target="blank" ></a></li>
-                            <li><a class="fab fa-twitter" href="javascript:void(0);" target="blank"></a></li>
-                        </ul>
-                    </div>
-                    <div class="">
-                        <ul class="footer-other-links">
-                            <li><a href="javascript:void(0);">Privacy Policy</a></li>
-                            <li>|</li>
-                            <li><a href="javascript:void(0);">Terms & Conditions</a></li>
+                            <li><a class="fab fa-instagram" href="https://www.instagram.com/magcitysl" target="blank" ></a></li>
+                            <li><a class="fab fa-tiktok" href="https://www.tiktok.com/@magcitysl" target="blank"></a></li>
                         </ul>
                     </div>
                 </div>

@@ -29,7 +29,7 @@
                         <img class="img-fluid" src="{{ asset('assets/common/images/icon-3.png') }}" alt="">
                     </div>
                     <div class="col-9 col-sm-10">
-                        <p class="mb-0 fw-bold counter-item-text-top"><span class="count" data-count="100000" data-timer="3000">0</span>+</p>
+                        <p class="mb-0 fw-bold counter-item-text-top"><span class="count" data-count="10000" data-timer="3000">0</span>+</p>
                         <p class="mb-0 counter-item-text-bottom">Vehicles Serviced Monthly</p>
                     </div>
                 </div>

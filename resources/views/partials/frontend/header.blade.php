@@ -6,10 +6,10 @@
                 <div class="dlab-topbar-left"></div>
                 <div class="dlab-topbar-right">
                     <ul class="social-bx list-inline float-end">
-                        <li><a class="fab fa-facebook-f" href="javascript:void(0);" target="blank"></a></li>
+                        <li><a class="fab fa-facebook-f" href="https://www.facebook.com/magcitycolombo/" target="blank"></a></li>
                         <li><a class="fab fa-whatsapp" href="javascript:void(0);" target="blank" ></a></li>
-                        <li><a class="fab fa-instagram" href="javascript:void(0);" target="blank" ></a></li>
-                        <li><a class="fab fa-twitter" href="javascript:void(0);" target="blank"></a></li>
+                        <li><a class="fab fa-instagram" href="https://www.instagram.com/magcitysl" target="blank" ></a></li>
+                        <li><a class="fab fa-tiktok" href="https://www.tiktok.com/@magcitysl" target="blank"></a></li>
                         <li class="ms-4"><a class="" href="javascript:void(0);">My Account</a></li>
                     </ul>
                 </div>
@@ -43,7 +43,7 @@
                         <li class="{{ (request()->segment(1) == 'contact-us') ? 'active' : '' }}"><a href="javascript:void(0);">Contact Us</a></li>
                     </ul>
 
-                    <a href="https://new.magcitysys.com/book" target="_blank" class="site-button-secondry button-skew z-index1 ms-4 text-uppercase d-none d-lg-block">Book Online</a>
+                    <a href="https://new.magcitysys.com/book" target="_blank" class="site-button book-now-button button-skew z-index1 ms-4 text-uppercase d-none d-lg-block">Book Online</a>
                 </div>
             </div>
         </div>

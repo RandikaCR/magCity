@@ -10,8 +10,7 @@
                     <div class="col-sm-4 mb-4 mb-sm-0">
                         <div class="row">
                             <div class="col-3 col-sm-2 counter-item-image-area">
-                                {{--<img class="img-fluid" src="{{ asset('assets/common/images/icon-4.png') }}" alt="">--}}
-                                <i class="ti-mobile font-30"></i>
+                                <img class="img-fluid" src="{{ asset('assets/common/images/icon-book-now.png') }}" alt="">
                             </div>
                             <div class="col-9 col-sm-10">
                                 <p class="mb-0 fw-medium footer-banner-item-text-top text-white">Book Online</p>
@@ -22,8 +21,7 @@
                     <div class="col-sm-4 mb-4 mb-sm-0">
                         <div class="row">
                             <div class="col-3 col-sm-2 counter-item-image-area">
-                                {{--<img class="img-fluid" src="{{ asset('assets/common/images/icon-4.png') }}" alt="">--}}
-                                <i class="ti-mobile font-30"></i>
+                                <img class="img-fluid" src="{{ asset('assets/common/images/icon-phone.png') }}" alt="">
                             </div>
                             <div class="col-9 col-sm-10">
                                 <p class="mb-0 fw-medium footer-banner-item-text-top text-white">Call Us</p>
@@ -38,7 +36,7 @@
                     <div class="col-sm-4 mb-4 mb-sm-0">
                         <div class="row justify-content-center">
                             <div class="col-6 col-sm-6 counter-item-image-area">
-                                <img class="img-fluid" src="{{ asset('assets/common/images/icon-4.png') }}" alt="">
+                                <img class="img-fluid" src="{{ asset('assets/common/images/icon-chat.png') }}" alt="">
                             </div>
                         </div>
                     </div>
