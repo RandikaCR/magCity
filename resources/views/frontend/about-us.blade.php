@@ -18,7 +18,6 @@ $pageTitle = 'About Us';
 
         @include('partials.frontend.inner-banner')
 
-        @include('partials.frontend.counters')
 
         <div class="bg-gradient-1">
             <div class="section-full">
