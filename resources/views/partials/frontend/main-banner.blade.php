@@ -29,7 +29,7 @@
                                  style="z-index: 12;background-color:rgba(0, 0, 0, 0.50);border-color:rgba(0, 0, 0, 0);border-width:0px;">
                             </div>
 
-                            
+
 
                             <!-- LAYER NR. 2 [ for title ] -->
                             <div class="tp-caption tp-resizeme"
