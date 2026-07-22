@@ -10722,12 +10722,12 @@ ol.commentlist li .star-rating {
 /* Support and Buy Button */
 .theme-btn{
 	background-color: #ffffff;
-    border-radius: 40px;
-    bottom: 10px;
+    border-radius: 30px;
+    bottom: 75px;
     color: #ffffff;
     display: table;
     height: 50px;
-    left: 10px;
+    right: 15px;
     min-width: 50px;
     position: fixed;
     text-align: center;
@@ -10738,14 +10738,14 @@ ol.commentlist li .star-rating {
     line-height: 50px;
 }
 .theme-btn.bt-support-now{
-	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1ebbf0+8,39dfaa+100 */
-	background: #cf0000; /* Old browsers */
-	background: -moz-linear-gradient(45deg, #cf0000 8%, #d91a1a 100%); /* FF3.6-15 */
-	background: -webkit-linear-gradient(45deg, #cf0000 8%,#d91a1a 100%); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(45deg, #cf0000 8%,#d91a1a 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cf0000', endColorstr='#d91a1a',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-	/*bottom: 70px;*/
+	background: #02b638;
 }
+
+.theme-btn.bt-support-now img{
+    width: 32px;
+    margin-top: 9px;
+}
+
 .theme-btn.bt-buy-now{
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1fdf61+0,88BA46+100 */
 	background: #98020A; /* Old browsers */

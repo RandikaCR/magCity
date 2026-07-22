@@ -74,6 +74,37 @@
                             <li><a class="fab fa-instagram" href="https://www.instagram.com/magcitysl" target="blank" ></a></li>
                             <li><a class="fab fa-tiktok" href="https://www.tiktok.com/@magcitysl" target="blank"></a></li>
                         </ul>
+                        <div class="text-left mt-4">
+                            <div class="row">
+                                <div class="col-12">
+                                    <p class="text-uppercase fw-bold mb-2">opening hours:</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <p>Monday - Friday</p>
+                                </div>
+                                <div class="col-6">
+                                    <p class="fw-medium">8.00AM - 6.00PM</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <p>Saturday</p>
+                                </div>
+                                <div class="col-6">
+                                    <p class="fw-medium">8.00AM - 2.00PM</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <p>Sunday</p>
+                                </div>
+                                <div class="col-6">
+                                    <p class="text-danger fw-medium">Closed</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -90,7 +121,7 @@
 
                 </div>
                 <div class="col-lg-4 col-md-4 text-right">
-                    <span> Design and Develop By<a href="https://www.mediapassion.lk" target="_blank">Media Passion</a> </span>
+                    <span> Design and Develop By <a href="https://www.mediapassion.lk" target="_blank"><img id="flip-mp-copyright-image" src="{{ asset('assets/common/images/mp-red.png') }}" alt="Media Passion"> Media Passion</a> </span>
                 </div>
             </div>
         </div>

@@ -40,6 +40,11 @@ $rand = rand(1,9999);
 
 <style type="text/css">
 
+    #flip-mp-copyright-image{
+        width: 20px !important;
+        height: 20px !important;
+    }
+
     .owl-none .owl-nav{
         display: none;
     }

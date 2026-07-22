@@ -45,6 +45,22 @@
         $token = "{{ csrf_token() }}";
         return $token;
     }
+
+    function mpIcons(){
+        var images = [
+            "{{ asset('assets/common/images/mp-red.png') }}",
+            "{{ asset('assets/common/images/mp-black.png') }}"
+        ];
+        var index = 0;
+
+
+        setInterval(function() {
+            index = (index + 1) % images.length;
+            $('#flip-mp-copyright-image').fadeOut(400, function() {
+                $(this).attr('src', images[index]).fadeIn(400);
+            });
+        }, 1000);
+    }
 </script>
 
 
@@ -89,6 +105,8 @@
 
 <script>
     $(document).ready(function (){
+        mpIcons();
+
         setInterval(function() {
             var $firstItem = $('.news-ticker li:first');
             $firstItem.animate({ height: 0, opacity: 0 }, 600, function() {
