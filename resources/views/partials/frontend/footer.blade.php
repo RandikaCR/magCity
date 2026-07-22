@@ -121,7 +121,7 @@
 
                 </div>
                 <div class="col-lg-4 col-md-4 text-right">
-                    <span> Design and Develop By <a href="https://www.mediapassion.lk" target="_blank"><img id="flip-mp-copyright-image" src="{{ asset('assets/common/images/mp-red.png') }}" alt="Media Passion"> Media Passion</a> </span>
+                    <span> Designed and Developed By <a href="https://www.mediapassion.lk" target="_blank"><img id="flip-mp-copyright-image" src="{{ asset('assets/common/images/mp-red.png') }}" alt="Media Passion"> Media Passion</a> </span>
                 </div>
             </div>
         </div>
