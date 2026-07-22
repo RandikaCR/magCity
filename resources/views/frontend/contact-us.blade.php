@@ -22,64 +22,6 @@
         <div class="section-full content-inner bg-white contact-style-1">
             <div class="container">
                 <div class="row">
-                    <!-- Left part start -->
-                    <div class="col-lg-4">
-                        <div class="p-a30 bg-gray clearfix m-b30 ">
-                            <h2>Send Us a Message</h2>
-                            <div class="dzFormMsg"></div>
-                            <form method="POST" class="dzForm" action="">
-                                @csrf
-                                <input type="hidden" value="Contact" name="dzToDo" >
-                                <div class="row">
-                                    <div class="col-lg-6">
-                                        <div class="form-group">
-                                            <label class="mb-1">Name*</label>
-                                            <div class="input-group">
-                                                <input name="name" type="text" class="form-control" placeholder="Enter here...">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <div class="form-group">
-                                            <label class="mb-1">Email*</label>
-                                            <div class="input-group">
-                                                <input name="email" type="email" class="form-control" placeholder="Enter here..." >
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <div class="form-group">
-                                            <label class="mb-1">Subject*</label>
-                                            <div class="input-group">
-                                                <input name="subject" type="text" class="form-control" placeholder="Enter here...">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <div class="form-group">
-                                            <label class="mb-1">Message*</label>
-                                            <div class="input-group">
-                                                <textarea name="message" rows="4" class="form-control" placeholder="Enter here..."></textarea>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    {{--<div class="col-lg-12">
-                                        <div class="form-group">
-                                            <div class="input-group">
-                                                <div class="g-recaptcha" data-sitekey="6LefsVUUAAAAADBPsLZzsNnETChealv6PYGzv3ZN" data-callback="verifyRecaptchaCallback" data-expired-callback="expiredRecaptchaCallback"></div>
-                                                <input class="form-control d-none" style="display:none;" data-recaptcha="true" required data-error="Please complete the Captcha">
-                                            </div>
-                                        </div>
-                                    </div>--}}
-                                    <div class="col-lg-12">
-                                        <button name="send" type="submit" class="site-button"><span>SEND</span></button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                    <!-- Left part END -->
-                    <!-- right part start -->
                     <div class="col-lg-8">
                         <div class="p-a30 m-b30 border-1 contact-area align-self-stretch">
                             <h2 class="m-b10">Quick Contact</h2>
@@ -151,7 +93,61 @@
                             </div>
                         </div>
                     </div>
-                    <!-- right part END -->
+                    <div class="col-lg-4">
+                        <div class="p-a30 bg-gray clearfix m-b30 ">
+                            <h2>Send Us a Message</h2>
+                            <div class="dzFormMsg"></div>
+                            <form method="POST" class="dzForm" action="">
+                                @csrf
+                                <input type="hidden" value="Contact" name="dzToDo" >
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label class="mb-1">Name*</label>
+                                            <div class="input-group">
+                                                <input name="name" type="text" class="form-control" placeholder="Enter here...">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label class="mb-1">Email*</label>
+                                            <div class="input-group">
+                                                <input name="email" type="email" class="form-control" placeholder="Enter here..." >
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-group">
+                                            <label class="mb-1">Subject*</label>
+                                            <div class="input-group">
+                                                <input name="subject" type="text" class="form-control" placeholder="Enter here...">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-group">
+                                            <label class="mb-1">Message*</label>
+                                            <div class="input-group">
+                                                <textarea name="message" rows="4" class="form-control" placeholder="Enter here..."></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {{--<div class="col-lg-12">
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <div class="g-recaptcha" data-sitekey="6LefsVUUAAAAADBPsLZzsNnETChealv6PYGzv3ZN" data-callback="verifyRecaptchaCallback" data-expired-callback="expiredRecaptchaCallback"></div>
+                                                <input class="form-control d-none" style="display:none;" data-recaptcha="true" required data-error="Please complete the Captcha">
+                                            </div>
+                                        </div>
+                                    </div>--}}
+                                    <div class="col-lg-12">
+                                        <button name="send" type="submit" class="site-button"><span>SEND</span></button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                 </div>
                 <div class="row m-b30">
                     <div class="col-lg-12">
