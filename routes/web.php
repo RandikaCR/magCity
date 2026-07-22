@@ -13,8 +13,10 @@ use App\Http\Controllers\Backend\DashboardController AS BackendDashboard;
 Route::group([ 'prefix' =>'/'], function () {
     Route::get('/', [Frontend::class, 'index'])->name('frontend.homepage');
     Route::get('/about-us', [Frontend::class, 'aboutUs'])->name('frontend.aboutUs');
+    Route::get('/contact-us', [Frontend::class, 'contactUs'])->name('frontend.contactUs');
     Route::get('/services', [Frontend::class, 'services'])->name('frontend.services');
     Route::get('/our-standard', [Frontend::class, 'ourStandard'])->name('frontend.ourStandard');
+    Route::get('/branches', [Frontend::class, 'branches'])->name('frontend.branches');
 
     Route::post('/app-logout', [Frontend::class, 'appLogout'])->name('frontend.auth.appLogout');
 });

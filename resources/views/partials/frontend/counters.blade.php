@@ -18,7 +18,7 @@
                         <img class="img-fluid" src="{{ asset('assets/common/images/icon-2.png') }}" alt="">
                     </div>
                     <div class="col-9 col-sm-10">
-                        <p class="mb-0 fw-bold counter-item-text-top"><span class="count" data-count="7" data-timer="2000">0</span>+ LOCATIONS</p>
+                        <p class="mb-0 fw-bold counter-item-text-top"><span class="count" data-count="7" data-timer="2000">0</span> LOCATIONS</p>
                         <p class="mb-0 counter-item-text-bottom">Across Sri Lanka</p>
                     </div>
                 </div>

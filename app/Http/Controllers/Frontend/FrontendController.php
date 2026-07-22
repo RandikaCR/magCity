@@ -16,12 +16,20 @@ class FrontendController extends Controller
         return view('frontend.about-us');
     }
 
+    public function contactUs(Request $request){
+        return view('frontend.contact-us');
+    }
+
     public function services(Request $request){
         return view('frontend.services');
     }
 
     public function ourStandard(Request $request){
         return view('frontend.our-standard');
+    }
+
+    public function branches(Request $request){
+        return view('frontend.branches');
     }
 
     public function appLogout(Request $request){

@@ -7,10 +7,10 @@
                 <div class="dlab-topbar-right">
                     <ul class="social-bx list-inline float-end">
                         <li><a class="fab fa-facebook-f" href="https://www.facebook.com/magcitycolombo/" target="blank"></a></li>
-                        <li><a class="fab fa-whatsapp" href="javascript:void(0);" target="blank" ></a></li>
+                        <li><a class="fab fa-youtube" href="https://www.youtube.com/@MAGCITY-SL" target="blank" ></a></li>
                         <li><a class="fab fa-instagram" href="https://www.instagram.com/magcitysl" target="blank" ></a></li>
                         <li><a class="fab fa-tiktok" href="https://www.tiktok.com/@magcitysl" target="blank"></a></li>
-                        <li class="ms-4"><a class="" href="javascript:void(0);">My Account</a></li>
+                        {{--<li class="ms-4"><a class="" href="javascript:void(0);">My Account</a></li>--}}
                     </ul>
                 </div>
             </div>
@@ -36,11 +36,11 @@
                         <li class="{{ (request()->segment(1) == '') ? 'active' : '' }}"><a href="{{ url('/') }}">Home</a></li>
                         <li class="{{ (request()->segment(1) == 'services') ? 'active' : '' }}"><a href="{{ url('/services') }}">Services</a></li>
                         {{--<li class="{{ (request()->segment(1) == 'our-standard') ? 'active' : '' }}"><a href="{{ url('/our-standard') }}">Our Standard</a></li>--}}
-                        <li class="{{ (request()->segment(1) == 'branches') ? 'active' : '' }}"><a href="javascript:void(0);">Branches</a></li>
+                        <li class="{{ (request()->segment(1) == 'branches') ? 'active' : '' }}"><a href="{{ url('/branches') }}">Branches</a></li>
                         <li class="{{ (request()->segment(1) == 'warranty') ? 'active' : '' }}"><a href="https://magcitywarranty.com/" target="_blank">Warranty</a></li>
                         <li class="{{ (request()->segment(1) == 'about-us') ? 'active' : '' }}"><a href="{{ url('/about-us') }}">About Us</a></li>
-                        <li class="{{ (request()->segment(1) == 'news') ? 'active' : '' }}"><a href="javascript:void(0);">News</a></li>
-                        <li class="{{ (request()->segment(1) == 'contact-us') ? 'active' : '' }}"><a href="javascript:void(0);">Contact Us</a></li>
+                        <li class="{{ (request()->segment(1) == 'blog') ? 'active' : '' }}"><a href="{{ url('/blog') }}">Blog</a></li>
+                        <li class="{{ (request()->segment(1) == 'contact-us') ? 'active' : '' }}"><a href="{{ url('/contact-us') }}">Contact Us</a></li>
                     </ul>
 
                     <a href="https://new.magcitysys.com/book" target="_blank" class="site-button book-now-button button-skew z-index1 ms-4 text-uppercase d-none d-lg-block">Book Online</a>

@@ -26,11 +26,11 @@
                             <div class="col-9 col-sm-10">
                                 <p class="mb-0 fw-medium footer-banner-item-text-top text-white">Call Us</p>
                                 <p class="mb-2 footer-banner-item-text-bottom text-white">Speak with our team</p>
-                                <p class="mb-0 footer-banner-item-text-bottom text-white">Colombo: <span class="ms-2">0114734020</span></p>
-                                <p class="mb-0 footer-banner-item-text-bottom text-white">Galle: <span class="ms-2">0912228388</span></p>
-                                <p class="mb-0 footer-banner-item-text-bottom text-white">Nugegoda: <span class="ms-2">0112199799</span></p>
-                                <p class="mb-0 footer-banner-item-text-bottom text-white">Ratmalana: <span class="ms-2">0112626333</span></p>
-                                <p class="mb-0 footer-banner-item-text-bottom text-white">Gatambe: <span class="ms-2">0812388699</span></p>
+                                <p class="mb-0 footer-banner-item-text-bottom text-white">Colombo: <span class="ms-2"><a class="text-white" href="tel:+94114734020">0114734020</a></span></p>
+                                <p class="mb-0 footer-banner-item-text-bottom text-white">Galle: <span class="ms-2"><a class="text-white" href="tel:+94912228388">0912228388</a></span></p>
+                                <p class="mb-0 footer-banner-item-text-bottom text-white">Nugegoda: <span class="ms-2"><a class="text-white" href="tel:+94112199799">0112199799</a></span></p>
+                                <p class="mb-0 footer-banner-item-text-bottom text-white">Ratmalana: <span class="ms-2"><a class="text-white" href="tel:+94112626333">0112626333</a></span></p>
+                                <p class="mb-0 footer-banner-item-text-bottom text-white">Gatambe: <span class="ms-2"><a class="text-white" href="tel:+94812388699">0812388699</a></span></p>
                             </div>
                         </div>
                     </div>

@@ -42,8 +42,8 @@
                                 <h4 class="m-b15 text-uppercase">Company</h4>
                                 <ul>
                                     <li><a href="javascript:void(0);">About Us</a></li>
-                                    <li><a href="javascript:void(0);">Careers</a></li>
-                                    <li><a href="javascript:void(0);">News & Articles</a></li>
+                                    <li><a href="{{ url('/branches') }}">Branches</a></li>
+                                    <li><a href="{{ url('/blog') }}">Blog</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -52,8 +52,8 @@
                                 <h4 class="m-b15 text-uppercase">Support</h4>
                                 <ul>
                                     <li><a href="https://magcitywarranty.com/" target="_blank">Warranty</a></li>
-                                    <li><a href="javascript:void(0);">FAQs</a></li>
-                                    <li><a href="javascript:void(0);">Contact Us</a></li>
+                                    <li><a href="{{ url('/faq') }}">FAQs</a></li>
+                                    <li><a href="{{ url('/contact-us') }}">Contact Us</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -70,7 +70,7 @@
                     <div class="widget widget_about footer-social-icons">
                         <ul class="dlab-social-icon dez-border">
                             <li><a class="fab fa-facebook-f" href="https://www.facebook.com/magcitycolombo/" target="blank"></a></li>
-                            <li><a class="fab fa-whatsapp" href="javascript:void(0);" target="blank" ></a></li>
+                            <li><a class="fab fa-youtube" href="https://www.youtube.com/@MAGCITY-SL" target="blank" ></a></li>
                             <li><a class="fab fa-instagram" href="https://www.instagram.com/magcitysl" target="blank" ></a></li>
                             <li><a class="fab fa-tiktok" href="https://www.tiktok.com/@magcitysl" target="blank"></a></li>
                         </ul>
