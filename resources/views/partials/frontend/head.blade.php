@@ -40,6 +40,10 @@ $rand = rand(1,9999);
 
 <style type="text/css">
 
+    .owl-none .owl-nav{
+        display: none;
+    }
+
     .book-now-button{
         color: #98020a;
         background: #fff;
