@@ -4,9 +4,9 @@
 <meta name="keywords" content="" >
 <meta name="author" content="" >
 <meta name="robots" content="" >
-<meta name="description" content="" >
-<meta property="og:title" content="" >
-<meta property="og:description" content="" >
+<meta name="description" content="Mag City provides you with one place for all your vehicle needs in Sri Lanka. From running repairs, servicing, collision repairs, paint protection, etc." >
+<meta property="og:title" content="Car Repair In Colombo | Colombo | Mag City Sri Lanka" >
+<meta property="og:description" content="Mag City provides you with one place for all your vehicle needs in Sri Lanka. From running repairs, servicing, collision repairs, paint protection, etc." >
 <meta property="og:image" content="" >
 
 

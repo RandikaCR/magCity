@@ -44,9 +44,9 @@
                                         <p class="text-uppercase fw-bold mb-3 text-primary">Our Services</p>
                                     </div>
                                     <div class="dlab-post-text">
-                                        <p class="mb-0 fw-medium font-20">A Better Process.</p>
-                                        <p class="mb-3 fw-medium font-20">A Better Experience.</p>
-                                        <p class="font-14 mb-4">Every vehicle followers a structured process designed around precision, transparency and long-term reliability</p>
+                                        {{--<p class="mb-0 fw-medium font-20">A Better Process.</p>
+                                        <p class="mb-3 fw-medium font-20">A Better Experience.</p>--}}
+                                        <p class="font-14 mb-4">Enjoy exciting deals and seasonal promotions on selected vehicle care services. Experience premium automotive care at exceptional value.</p>
                                     </div>
                                 </div>
                                 {{--<div class="dlab-post-media dlab-img-effect zoom-slow">
