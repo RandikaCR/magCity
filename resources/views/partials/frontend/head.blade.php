@@ -49,6 +49,7 @@ $rand = rand(1,9999);
         background: #fff;
         font-weight: 700;
         margin-right: 0 !important;
+        border-radius: 4px;
     }
 
     .news-ticker {

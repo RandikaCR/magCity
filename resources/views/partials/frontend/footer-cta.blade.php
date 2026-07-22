@@ -30,6 +30,7 @@
                                 <p class="mb-0 footer-banner-item-text-bottom text-white">Galle: <span class="ms-2">0912228388</span></p>
                                 <p class="mb-0 footer-banner-item-text-bottom text-white">Nugegoda: <span class="ms-2">0112199799</span></p>
                                 <p class="mb-0 footer-banner-item-text-bottom text-white">Ratmalana: <span class="ms-2">0112626333</span></p>
+                                <p class="mb-0 footer-banner-item-text-bottom text-white">Gatambe: <span class="ms-2">0812388699</span></p>
                             </div>
                         </div>
                     </div>

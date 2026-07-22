@@ -37,7 +37,7 @@
                         <li class="{{ (request()->segment(1) == 'services') ? 'active' : '' }}"><a href="{{ url('/services') }}">Services</a></li>
                         {{--<li class="{{ (request()->segment(1) == 'our-standard') ? 'active' : '' }}"><a href="{{ url('/our-standard') }}">Our Standard</a></li>--}}
                         <li class="{{ (request()->segment(1) == 'branches') ? 'active' : '' }}"><a href="javascript:void(0);">Branches</a></li>
-                        <li class="{{ (request()->segment(1) == 'warranty') ? 'active' : '' }}"><a href="javascript:void(0);">Warranty</a></li>
+                        <li class="{{ (request()->segment(1) == 'warranty') ? 'active' : '' }}"><a href="https://magcitywarranty.com/" target="_blank">Warranty</a></li>
                         <li class="{{ (request()->segment(1) == 'about-us') ? 'active' : '' }}"><a href="{{ url('/about-us') }}">About Us</a></li>
                         <li class="{{ (request()->segment(1) == 'news') ? 'active' : '' }}"><a href="javascript:void(0);">News</a></li>
                         <li class="{{ (request()->segment(1) == 'contact-us') ? 'active' : '' }}"><a href="javascript:void(0);">Contact Us</a></li>

@@ -51,7 +51,7 @@
                             <div class="widget widget_services">
                                 <h4 class="m-b15 text-uppercase">Support</h4>
                                 <ul>
-                                    <li><a href="javascript:void(0);">Warranty</a></li>
+                                    <li><a href="https://magcitywarranty.com/" target="_blank">Warranty</a></li>
                                     <li><a href="javascript:void(0);">FAQs</a></li>
                                     <li><a href="javascript:void(0);">Contact Us</a></li>
                                 </ul>
