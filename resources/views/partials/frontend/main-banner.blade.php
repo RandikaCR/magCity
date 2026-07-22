@@ -29,32 +29,7 @@
                                  style="z-index: 12;background-color:rgba(0, 0, 0, 0.50);border-color:rgba(0, 0, 0, 0);border-width:0px;">
                             </div>
 
-                            <div class="tp-caption tp-resizeme"
-                                 id="slide-100-layer-3"
-                                 data-x="['left','left','left','left']" data-hoffset="['30','30','30','30']"
-                                 data-y="['top','top','top','top']" data-voffset="['100','250','250','190']"
-                                 data-fontsize="['20','20','20','20']"
-                                 data-lineheight="['30','30','30','30']"
-                                 data-width="['800','800','700','420']"
-                                 data-height="['none','none','none','none']"
-                                 data-whitespace="['normal','normal','normal','normal']"
-                                 data-type="text"
-                                 data-responsive_offset="on"
-                                 data-frames='[
-										{"from":"y:50px(R);opacity:0;","speed":1500,"to":"o:1;","delay":500,"ease":"Power4.easeOut"},
-										{"delay":"wait","speed":1000,"to":"y:-50px;opacity:0;","ease":"Power2.easeInOut"}]'
-                                 data-textAlign="['left','left','left','left']"
-                                 data-paddingtop="[0,0,0,0]"
-                                 data-paddingright="[0,0,0,0]"
-                                 data-paddingbottom="[0,0,0,0]"
-                                 data-paddingleft="[0,0,0,0]"
-                                 data-marginTop="[0,0,0,-160]"
-                                 data-marginRight="[0,0,0,0]"
-                                 data-marginBottom="[0,0,0,0]"
-                                 data-marginLeft="[0,0,0,0]"
-                                 style="z-index: 13; font-weight: 500; color: rgba(255, 255, 255, 0.85); border-width:0px;">
-                                <span class="text-uppercase">VEHICLE CARE...</span>
-                            </div>
+                            
 
                             <!-- LAYER NR. 2 [ for title ] -->
                             <div class="tp-caption tp-resizeme"
@@ -156,32 +131,7 @@
                                  style="z-index: 12;background-color:rgba(0, 0, 0, 0.50);border-color:rgba(0, 0, 0, 0);border-width:0px;">
                             </div>
 
-                            <div class="tp-caption tp-resizeme"
-                                 id="slide-100-layer-3"
-                                 data-x="['left','left','left','left']" data-hoffset="['30','30','30','30']"
-                                 data-y="['top','top','top','top']" data-voffset="['100','250','250','190']"
-                                 data-fontsize="['20','20','20','20']"
-                                 data-lineheight="['30','30','30','30']"
-                                 data-width="['800','800','700','420']"
-                                 data-height="['none','none','none','none']"
-                                 data-whitespace="['normal','normal','normal','normal']"
-                                 data-type="text"
-                                 data-responsive_offset="on"
-                                 data-frames='[
-										{"from":"y:50px(R);opacity:0;","speed":1500,"to":"o:1;","delay":500,"ease":"Power4.easeOut"},
-										{"delay":"wait","speed":1000,"to":"y:-50px;opacity:0;","ease":"Power2.easeInOut"}]'
-                                 data-textAlign="['left','left','left','left']"
-                                 data-paddingtop="[0,0,0,0]"
-                                 data-paddingright="[0,0,0,0]"
-                                 data-paddingbottom="[0,0,0,0]"
-                                 data-paddingleft="[0,0,0,0]"
-                                 data-marginTop="[0,0,0,-160]"
-                                 data-marginRight="[0,0,0,0]"
-                                 data-marginBottom="[0,0,0,0]"
-                                 data-marginLeft="[0,0,0,0]"
-                                 style="z-index: 13; font-weight: 500; color: rgba(255, 255, 255, 0.85); border-width:0px;">
-                                <span class="text-uppercase">VEHICLE CARE...</span>
-                            </div>
+
 
                             <!-- LAYER NR. 2 [ for title ] -->
                             <div class="tp-caption tp-resizeme"
@@ -283,32 +233,7 @@
                                  style="z-index: 12;background-color:rgba(0, 0, 0, 0.50);border-color:rgba(0, 0, 0, 0);border-width:0px;">
                             </div>
 
-                            <div class="tp-caption tp-resizeme"
-                                 id="slide-100-layer-3"
-                                 data-x="['left','left','left','left']" data-hoffset="['30','30','30','30']"
-                                 data-y="['top','top','top','top']" data-voffset="['100','250','250','190']"
-                                 data-fontsize="['20','20','20','20']"
-                                 data-lineheight="['30','30','30','30']"
-                                 data-width="['800','800','700','420']"
-                                 data-height="['none','none','none','none']"
-                                 data-whitespace="['normal','normal','normal','normal']"
-                                 data-type="text"
-                                 data-responsive_offset="on"
-                                 data-frames='[
-										{"from":"y:50px(R);opacity:0;","speed":1500,"to":"o:1;","delay":500,"ease":"Power4.easeOut"},
-										{"delay":"wait","speed":1000,"to":"y:-50px;opacity:0;","ease":"Power2.easeInOut"}]'
-                                 data-textAlign="['left','left','left','left']"
-                                 data-paddingtop="[0,0,0,0]"
-                                 data-paddingright="[0,0,0,0]"
-                                 data-paddingbottom="[0,0,0,0]"
-                                 data-paddingleft="[0,0,0,0]"
-                                 data-marginTop="[0,0,0,-160]"
-                                 data-marginRight="[0,0,0,0]"
-                                 data-marginBottom="[0,0,0,0]"
-                                 data-marginLeft="[0,0,0,0]"
-                                 style="z-index: 13; font-weight: 500; color: rgba(255, 255, 255, 0.85); border-width:0px;">
-                                <span class="text-uppercase">VEHICLE CARE...</span>
-                            </div>
+
 
                             <!-- LAYER NR. 2 [ for title ] -->
                             <div class="tp-caption tp-resizeme"
