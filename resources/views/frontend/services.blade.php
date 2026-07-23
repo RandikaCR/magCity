@@ -158,7 +158,6 @@
                                         <li>Audi</li>
                                         <li>Mini</li>
                                         <li>Chrysler</li>
-                                        <li>Etc.</li>
                                     </ul>
                                 </div>
                                 <div class="col-6">
@@ -168,7 +167,7 @@
                                         <li>Micro</li>
                                         <li>Porsche</li>
                                         <li>Volkswagen</li>
-                                        <li>Chevrolet</li>
+                                        <li>Chevrolet etc..</li>
                                     </ul>
                                 </div>
                             </div>
