@@ -15,6 +15,7 @@
                             <div class="col-9 col-sm-10">
                                 <p class="mb-0 fw-medium footer-banner-item-text-top text-white">Book Online</p>
                                 <p class="mb-0 footer-banner-item-text-bottom text-white">Quick and easy appointment booking.</p>
+                                <a href="https://new.magcitysys.com/book" target="_blank" class="site-button book-now-button button-skew z-index1 mt-4 text-uppercase">Book Online</a>
                             </div>
                         </div>
                     </div>
