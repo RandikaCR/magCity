@@ -38,7 +38,12 @@
                         {{--<li class="{{ (request()->segment(1) == 'our-standard') ? 'active' : '' }}"><a href="{{ url('/our-standard') }}">Our Standard</a></li>--}}
                         <li class="{{ (request()->segment(1) == 'branches') ? 'active' : '' }}"><a href="{{ url('/branches') }}">Branches</a></li>
                         <li class="{{ (request()->segment(1) == 'warranty') ? 'active' : '' }}"><a href="https://magcitywarranty.com/" target="_blank">Warranty</a></li>
-                        <li class="{{ (request()->segment(1) == 'about-us') ? 'active' : '' }}"><a href="{{ url('/about-us') }}">About Us</a></li>
+                        <li class="{{ (request()->segment(1) == 'about-us' || request()->segment(1) == 'racing-team') ? 'active' : '' }}"> <a href="javascript:void(0);">About Us<i class="fas fa-chevron-down"></i></a>
+                            <ul class="sub-menu">
+                                <li><a href="{{ url('/about-us') }}">About Us</a></li>
+                                <li><a href="{{ url('/racing-team') }}">Magcity Racing Team</a></li>
+                            </ul>
+                        </li>
                         <li class="{{ (request()->segment(1) == 'blog') ? 'active' : '' }}"><a href="{{ url('/blog') }}">Blog</a></li>
                         <li class="{{ (request()->segment(1) == 'contact-us') ? 'active' : '' }}"><a href="{{ url('/contact-us') }}">Contact Us</a></li>
                     </ul>

@@ -28,6 +28,11 @@ class FrontendController extends Controller
         return view('frontend.our-standard');
     }
 
+    public function racingTeam(Request $request){
+        return view('frontend.racing-team');
+    }
+
+
     public function branches(Request $request){
         return view('frontend.branches');
     }

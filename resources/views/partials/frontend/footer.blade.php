@@ -43,6 +43,7 @@
                                 <ul>
                                     <li><a href="javascript:void(0);">About Us</a></li>
                                     <li><a href="{{ url('/branches') }}">Branches</a></li>
+                                    <li><a href="{{ url('/racing-team') }}">Racing Team</a></li>
                                     <li><a href="{{ url('/blog') }}">Blog</a></li>
                                 </ul>
                             </div>
@@ -52,7 +53,7 @@
                                 <h4 class="m-b15 text-uppercase">Support</h4>
                                 <ul>
                                     <li><a href="https://magcitywarranty.com/" target="_blank">Warranty</a></li>
-                                    <li><a href="{{ url('/faq') }}">FAQs</a></li>
+                                    {{--<li><a href="{{ url('/faq') }}">FAQs</a></li>--}}
                                     <li><a href="{{ url('/contact-us') }}">Contact Us</a></li>
                                 </ul>
                             </div>
