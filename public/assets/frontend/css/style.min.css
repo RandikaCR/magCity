@@ -459,6 +459,16 @@ strong {
 }
 /*text size*/
 
+.font-12 {
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.font-13 {
+    font-size: 13px;
+    line-height: 20px;
+}
+
 .font-14 {
     font-size: 14px;
 }
@@ -1779,6 +1789,11 @@ dl dd {
     margin-bottom: -100px;
     z-index: 2;
 }
+
+.dlab-info-has.p-a10 {
+    padding: 10px 20px;
+}
+
 .dlab-info-has.p-a15 {
     padding: 15px;
 }
@@ -6671,7 +6686,7 @@ a,
     width: 30px;
     height: 30px;
     text-align: center;
-    line-height: 30px;
+    line-height: 24px;
     display: block;
     border-radius: 100%;
     -webkit-transform: translateY(-50%);

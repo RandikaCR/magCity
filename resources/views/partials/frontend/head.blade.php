@@ -103,12 +103,13 @@ $rand = rand(1,9999);
     .s-item-img-overlay{
         position: absolute;
         width: 100%;
-        height: 80%;
+        /*height: 80%;*/
+        height: 45%;
         top: 0;
         left: 0;
         z-index: 1;
         background: #001E46;
-        background: linear-gradient(180deg,rgba(0, 30, 70, 1) 0%, rgba(0, 30, 70, 1) 25%, rgba(151, 1, 10, 0.96) 72%, rgba(151, 1, 10, 0) 100%);
+        background: linear-gradient(180deg,rgba(0, 30, 70, 1) 0%, rgba(0, 30, 70, 1) 20%, rgba(151, 1, 10, 0.80) 80%, rgba(151, 1, 10, 0) 100%);
         opacity: 1;
         padding: 20px 10px 10px;
     }

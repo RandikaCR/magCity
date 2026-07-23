@@ -84,79 +84,80 @@
                             <div class="services-carousel owl-carousel owl-none">
                                 <div class="s-item">
                                     <div class="s-item-img-area">
-                                        <div class="s-item-img-overlay">
-                                            <div class="text-white text-center">
-                                                <h5 class="font-26 font-weight-500">01</h5>
-                                                <p class="font-20 text-uppercase font-weight-500">Running Repairs</p>
-                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+                                        <a href="{{ url('/services#service-running-repairs') }}">
+                                            <div class="s-item-img-overlay">
+                                                <div class="text-white text-center">
+                                                    <p class="font-20 text-uppercase font-weight-500">Running Repairs</p>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <img class="img-fluid" src="{{ asset('assets/common/images/service-01.jpg') }}">
+                                            <img class="img-fluid" src="{{ asset('assets/common/images/service-01.jpg') }}">
+                                        </a>
                                     </div>
                                 </div>
 
                                 <div class="s-item">
                                     <div class="s-item-img-area">
-                                        <div class="s-item-img-overlay">
-                                            <div class="text-white text-center">
-                                                <h5 class="font-26 font-weight-500">02</h5>
-                                                <p class="font-20 text-uppercase font-weight-500">Running Repairs</p>
-                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+                                        <a href="{{ url('/services#service-vehicle-servicing') }}">
+                                            <div class="s-item-img-overlay">
+                                                <div class="text-white text-center">
+                                                    <p class="font-20 text-uppercase font-weight-500">Vehicle Servicing</p>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <img class="img-fluid" src="{{ asset('assets/common/images/service-02.jpg') }}">
+                                            <img class="img-fluid" src="{{ asset('assets/common/images/service-02.jpg') }}">
+                                        </a>
                                     </div>
                                 </div>
 
                                 <div class="s-item">
                                     <div class="s-item-img-area">
-                                        <div class="s-item-img-overlay">
-                                            <div class="text-white text-center">
-                                                <h5 class="font-26 font-weight-500">03</h5>
-                                                <p class="font-20 text-uppercase font-weight-500">Running Repairs</p>
-                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+                                        <a href="{{ url('/services#service-vehicle-detailing') }}">
+                                            <div class="s-item-img-overlay">
+                                                <div class="text-white text-center">
+                                                    <p class="font-20 text-uppercase font-weight-500">Vehicle detailing</p>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <img class="img-fluid" src="{{ asset('assets/common/images/service-03.jpg') }}">
+                                            <img class="img-fluid" src="{{ asset('assets/common/images/service-03.jpg') }}">
+                                        </a>
                                     </div>
                                 </div>
 
                                 <div class="s-item">
                                     <div class="s-item-img-area">
-                                        <div class="s-item-img-overlay">
-                                            <div class="text-white text-center">
-                                                <h5 class="font-26 font-weight-500">04</h5>
-                                                <p class="font-20 text-uppercase font-weight-500">Running Repairs</p>
-                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+                                        <a href="{{ url('/services#service-collision-repair') }}">
+                                            <div class="s-item-img-overlay">
+                                                <div class="text-white text-center">
+                                                    <p class="font-20 text-uppercase font-weight-500">Collision Repair</p>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <img class="img-fluid" src="{{ asset('assets/common/images/service-04.jpg') }}">
+                                            <img class="img-fluid" src="{{ asset('assets/common/images/service-04.jpg') }}">
+                                        </a>
                                     </div>
                                 </div>
 
                                 <div class="s-item">
                                     <div class="s-item-img-area">
-                                        <div class="s-item-img-overlay">
-                                            <div class="text-white text-center">
-                                                <h5 class="font-26 font-weight-500">05</h5>
-                                                <p class="font-20 text-uppercase font-weight-500">Running Repairs</p>
-                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+                                        <a href="{{ url('/services#service-tune-up') }}">
+                                            <div class="s-item-img-overlay">
+                                                <div class="text-white text-center">
+                                                    <p class="font-20 text-uppercase font-weight-500">Tune up</p>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <img class="img-fluid" src="{{ asset('assets/common/images/service-05.jpg') }}">
+                                            <img class="img-fluid" src="{{ asset('assets/common/images/service-05.jpg') }}">
+                                        </a>
                                     </div>
                                 </div>
 
                                 <div class="s-item">
                                     <div class="s-item-img-area">
-                                        <div class="s-item-img-overlay">
-                                            <div class="text-white text-center">
-                                                <h5 class="font-26 font-weight-500">06</h5>
-                                                <p class="font-20 text-uppercase font-weight-500">Running Repairs</p>
-                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+                                        <a href="{{ url('/services#service-accessories') }}">
+                                            <div class="s-item-img-overlay">
+                                                <div class="text-white text-center">
+                                                    <p class="font-20 text-uppercase font-weight-500">Accessories</p>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <img class="img-fluid" src="{{ asset('assets/common/images/service-06.jpg') }}">
+                                            <img class="img-fluid" src="{{ asset('assets/common/images/service-06.jpg') }}">
+                                        </a>
+
                                     </div>
                                 </div>
 
