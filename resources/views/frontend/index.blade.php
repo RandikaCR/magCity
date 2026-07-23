@@ -97,10 +97,10 @@
 
                                 <div class="s-item">
                                     <div class="s-item-img-area">
-                                        <a href="{{ url('/services#service-vehicle-servicing') }}">
+                                        <a href="{{ url('/services#service-collision-repair') }}">
                                             <div class="s-item-img-overlay">
                                                 <div class="text-white text-center">
-                                                    <p class="font-20 text-uppercase font-weight-500">Vehicle Servicing</p>
+                                                    <p class="font-20 text-uppercase font-weight-500">Collision Repairs</p>
                                                 </div>
                                             </div>
                                             <img class="img-fluid" src="{{ asset('assets/common/images/service-02.jpg') }}">
@@ -110,10 +110,10 @@
 
                                 <div class="s-item">
                                     <div class="s-item-img-area">
-                                        <a href="{{ url('/services#service-vehicle-detailing') }}">
+                                        <a href="{{ url('/services#service-vehicle-servicing') }}">
                                             <div class="s-item-img-overlay">
                                                 <div class="text-white text-center">
-                                                    <p class="font-20 text-uppercase font-weight-500">Vehicle detailing</p>
+                                                    <p class="font-20 text-uppercase font-weight-500">Full Service</p>
                                                 </div>
                                             </div>
                                             <img class="img-fluid" src="{{ asset('assets/common/images/service-03.jpg') }}">
@@ -123,10 +123,10 @@
 
                                 <div class="s-item">
                                     <div class="s-item-img-area">
-                                        <a href="{{ url('/services#service-collision-repair') }}">
+                                        <a href="{{ url('/services#service-tune-up') }}">
                                             <div class="s-item-img-overlay">
                                                 <div class="text-white text-center">
-                                                    <p class="font-20 text-uppercase font-weight-500">Collision Repair</p>
+                                                    <p class="font-20 text-uppercase font-weight-500">Tune Up's</p>
                                                 </div>
                                             </div>
                                             <img class="img-fluid" src="{{ asset('assets/common/images/service-04.jpg') }}">
@@ -136,10 +136,10 @@
 
                                 <div class="s-item">
                                     <div class="s-item-img-area">
-                                        <a href="{{ url('/services#service-tune-up') }}">
+                                        <a href="{{ url('/services#service-accessories') }}">
                                             <div class="s-item-img-overlay">
                                                 <div class="text-white text-center">
-                                                    <p class="font-20 text-uppercase font-weight-500">Tune up</p>
+                                                    <p class="font-20 text-uppercase font-weight-500">Vehicle Accessories</p>
                                                 </div>
                                             </div>
                                             <img class="img-fluid" src="{{ asset('assets/common/images/service-05.jpg') }}">
@@ -149,10 +149,10 @@
 
                                 <div class="s-item">
                                     <div class="s-item-img-area">
-                                        <a href="{{ url('/services#service-accessories') }}">
+                                        <a href="{{ url('/services#service-vehicle-detailing') }}">
                                             <div class="s-item-img-overlay">
                                                 <div class="text-white text-center">
-                                                    <p class="font-20 text-uppercase font-weight-500">Accessories</p>
+                                                    <p class="font-20 text-uppercase font-weight-500">Vehicle Detailing</p>
                                                 </div>
                                             </div>
                                             <img class="img-fluid" src="{{ asset('assets/common/images/service-06.jpg') }}">

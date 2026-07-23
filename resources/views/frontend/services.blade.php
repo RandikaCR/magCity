@@ -144,7 +144,7 @@
                 <div class="row flex-sm-row-reverse">
                     <div class="col-sm-6 mb-3">
                         <div class="dlab-post-meta" id="service-vehicle-servicing">
-                            <p class="text-uppercase fw-bold mb-3 text-primary font-22">Vehicle Servicing</p>
+                            <p class="text-uppercase fw-bold mb-3 text-primary font-22">Full Service</p>
                         </div>
                         <div class="dlab-post-text">
                             <p class="mb-4">We at Mag City provide vehicle servicing for all brands of vehicles including hybrid and plug-in hybrid models using genuine oils, oil filters, etc.</p>
