@@ -79,7 +79,7 @@
                                  data-marginBottom="[0,0,0,0]"
                                  data-marginLeft="[0,0,0,0]"
                                  style="z-index: 13; font-weight: 500; color: rgba(255, 255, 255, 0.85); border-width:0px;">
-                                <span>Professional Maintenance | Expert Repairs | Serving You Islandwide.</span>
+                                <span>Professional Maintenance <span class="mx-2">|</span> Expert Repairs <span class="mx-2">|</span> Serving You Islandwide.</span>
                             </div>
 
                             <!-- LAYER NR. 4 [ for readmore botton ] -->
@@ -181,7 +181,7 @@
                                  data-marginBottom="[0,0,0,0]"
                                  data-marginLeft="[0,0,0,0]"
                                  style="z-index: 13; font-weight: 500; color: rgba(255, 255, 255, 0.85); border-width:0px;">
-                                <span>Professional Maintenance | Expert Repairs | Serving You Islandwide.</span>
+                                <span>Professional Maintenance <span class="mx-2">|</span> Expert Repairs <span class="mx-2">|</span> Serving You Islandwide.</span>
                             </div>
 
                             <!-- LAYER NR. 4 [ for readmore botton ] -->
@@ -283,7 +283,7 @@
                                  data-marginBottom="[0,0,0,0]"
                                  data-marginLeft="[0,0,0,0]"
                                  style="z-index: 13; font-weight: 500; color: rgba(255, 255, 255, 0.85); border-width:0px;">
-                                <span>Professional Maintenance | Expert Repairs | Serving You Islandwide.</span>
+                                <span>Professional Maintenance <span class="mx-2">|</span> Expert Repairs <span class="mx-2">|</span> Serving You Islandwide.</span>
                             </div>
 
                             <!-- LAYER NR. 4 [ for readmore botton ] -->
