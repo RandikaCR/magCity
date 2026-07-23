@@ -21,7 +21,7 @@
     <span>Book Now</span>
 </a>--}}
 
-<a  href="https://wa.me/94773099659" target="_blank" class="theme-btn bt-support-now">
+<a  href="https://wa.me/94769015261" target="_blank" class="theme-btn bt-support-now">
     <img class="img-fluid" src="{{ asset('assets/common/images/wa-icon.png') }}" alt="">
     <span>Chat with Magcity</span>
 </a>

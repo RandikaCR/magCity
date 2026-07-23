@@ -150,7 +150,7 @@
                             <p class="mb-4">We at Mag City provide vehicle servicing for all brands of vehicles including hybrid and plug-in hybrid models using genuine oils, oil filters, etc.</p>
                             <p class="mb-2">Vehicle makes include</p>
                             <div class="row">
-                                <div class="col-6">
+                                <div class="col-auto me-4">
                                     <ul class="list-check-circle primary">
                                         <li>Toyota</li>
                                         <li>BMW</li>
@@ -160,14 +160,14 @@
                                         <li>Chrysler</li>
                                     </ul>
                                 </div>
-                                <div class="col-6">
+                                <div class="col-auto">
                                     <ul class="list-check-circle primary">
                                         <li>Nissan</li>
                                         <li>Mercedes Benz</li>
                                         <li>Micro</li>
                                         <li>Porsche</li>
                                         <li>Volkswagen</li>
-                                        <li>Chevrolet etc..</li>
+                                        <li>Chevrolet etc.</li>
                                     </ul>
                                 </div>
                             </div>

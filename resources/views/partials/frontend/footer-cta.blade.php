@@ -37,7 +37,7 @@
                     <div class="col-sm-4 mb-4 mb-sm-0">
                         <div class="row justify-content-center">
                             <div class="col-6 col-sm-6 counter-item-image-area">
-                                <a href="https://wa.me/94773099659" target="_blank"><img class="img-fluid" src="{{ asset('assets/common/images/icon-chat-whatsapp.png') }}" alt=""></a>
+                                <a href="https://wa.me/94769015261" target="_blank"><img class="img-fluid" src="{{ asset('assets/common/images/icon-chat-whatsapp.png') }}" alt=""></a>
                             </div>
                         </div>
                     </div>
