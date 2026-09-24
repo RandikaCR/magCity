@@ -10,7 +10,90 @@
 @section('style')
     <style type="text/css">
         .services-card{
-            box-shadow: 0 1px 4px #ccc;
+            /*box-shadow: 0 1px 4px #ccc;*/
+        }
+
+        .banner-textarea-overlay{
+            background: rgba(0,0,0, 0.4);
+            padding: 20px 25px !important;
+            border-radius: 10px !important;
+        }
+
+        .banner-textarea-overlay .main-title{
+            font-family: 'Poppins',sans-serif;
+            z-index: 13;
+            white-space: normal;
+            font-size: 55px;
+            line-height: 60px;
+            margin-bottom: 10px;
+            font-weight: 700;
+            color: rgba(255, 255, 255, 1.00);
+            border-width:0;
+        }
+
+        .banner-textarea-overlay .sub-title{
+            z-index: 13;
+            line-height: 60px;
+            font-size: 20px;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.85);
+            border-width:0;
+            margin-bottom: 30px;
+        }
+
+        .banner-textarea-overlay .banner-btn-icon,
+        .banner-textarea-overlay .banner-btn-icon span,
+        .banner-textarea-overlay .banner-btn-icon i{
+            font-weight: 700 !important;
+        }
+
+        @media (max-width: 1240px) {
+            .banner-textarea-overlay .main-title{
+                font-size: 50px;
+            }
+
+            .banner-textarea-overlay .sub-title{
+
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .banner-textarea-overlay .main-title{
+                font-size: 40px;
+                line-height: 50px;
+            }
+
+            .banner-textarea-overlay .sub-title{
+                font-size: 25px;
+                line-height: 30px;
+                margin-top: 10px;
+            }
+        }
+
+        @media (max-width: 778px) {
+            .banner-textarea-overlay .main-title{
+                font-size: 30px;
+                line-height: 32px;
+            }
+
+            .banner-textarea-overlay .sub-title{
+                font-size: 17px;
+                line-height: 28px;
+                margin-top: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .banner-textarea-overlay .main-title{
+                font-size: 30px;
+                line-height: 36px;
+            }
+
+            .banner-textarea-overlay .sub-title{
+                font-size: 17px;
+                line-height: 28px;
+                margin-top: 10px;
+            }
         }
     </style>
 @endsection
