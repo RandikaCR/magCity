@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-6">
-                {{ date('Y', time()) }} © @ Admin.
+                {{ date('Y', time()) }} © FD Calculator @ Admin.
             </div>
         </div>
     </div>

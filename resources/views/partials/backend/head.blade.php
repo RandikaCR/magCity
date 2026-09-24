@@ -1,11 +1,13 @@
 <meta charset="utf-8" />
-<title>@yield('page_title')</title>
+<title>@yield('page_title') :: Magcity Admin</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta content="Admin" name="description" />
-<meta content="Randika De Alwis" name="author" />
+<meta property="title" content="" />
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="author" content="">
 <meta name="csrf-token" content="{{ csrf_token() }}">
 <!-- App favicon -->
-<link rel="icon" href="{{ asset('assets/common/images/logo-2.png') }}" type="image/png"/>
+<link rel="icon" href="{{ asset('assets/common/images/logo.png') }}" type="image/png"/>
 
 @yield('styles')
 

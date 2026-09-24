@@ -5,9 +5,12 @@ use Illuminate\Support\Facades\Route;
 
 //FRONTEND CONTROLLERS
 use App\Http\Controllers\Frontend\FrontendController AS Frontend;
+use App\Http\Controllers\Frontend\BlogsController AS FrontendBlogs;
 
 //BACKEND CONTROLLERS
 use App\Http\Controllers\Backend\DashboardController AS BackendDashboard;
+use App\Http\Controllers\Backend\BlogsController AS BackendBlogs;
+use App\Http\Controllers\Backend\UsersController AS BackendUsers;
 
 //1 - Frontend Routes
 Route::group([ 'prefix' =>'/'], function () {
@@ -19,7 +22,13 @@ Route::group([ 'prefix' =>'/'], function () {
     Route::get('/racing-team', [Frontend::class, 'racingTeam'])->name('frontend.racingTeam');
     Route::get('/branches', [Frontend::class, 'branches'])->name('frontend.branches');
 
-    Route::post('/app-logout', [Frontend::class, 'appLogout'])->name('frontend.auth.appLogout');
+
+    // B
+    Route::get('/blog', [FrontendBlogs::class, 'index'])->name('frontend.blogs.index');
+    Route::get('/blog/{slug}', [FrontendBlogs::class, 'view'])->name('frontend.blogs.view');
+
+
+    Route::post('/app-logout', [Frontend::class, 'appLogout'])->name('frontend.appLogout');
 });
 
 Route::get('/dashboard', function () {
@@ -35,6 +44,23 @@ Route::middleware('auth')->group(function () {
         // D
         Route::get('/', [BackendDashboard::class, 'index'])->name('backend.dashboard');
 
+
+        // B
+        Route::get('/blogs', [BackendBlogs::class, 'index'])->name('backend.blogs.index');
+        Route::get('/blogs/create', [BackendBlogs::class, 'create'])->name('backend.blogs.create');
+        Route::get('/blogs/edit/{id}', [BackendBlogs::class, 'edit'])->name('backend.blogs.edit');
+        Route::post('/blogs/store', [BackendBlogs::class, 'store'])->name('backend.blogs.store');
+        Route::post('/blogs/delete', [BackendBlogs::class, 'delete'])->name('backend.blogs.delete');
+        Route::post('/blogs/slug-generator', [BackendBlogs::class, 'slugGenerator'])->name('backend.blogs.slugGenerator');
+        Route::post('/blogs/upload-image', [BackendBlogs::class, 'imageUpload'])->name('backend.blogs.imageUpload');
+        Route::post('/blogs/set-primary-image', [BackendBlogs::class, 'setPrimaryImage'])->name('backend.blogs.setPrimaryImage');
+        Route::post('/blogs/image-delete', [BackendBlogs::class, 'deleteImage'])->name('backend.blogs.deleteImage');
+        Route::post('/blogs/status', [BackendBlogs::class, 'status'])->name('backend.blogs.status');
+
+
+        // U
+        Route::get('/my-profile', [BackendUsers::class, 'myProfile'])->name('backend.users.myProfile');
+        Route::post('/profile/update-personal-info', [BackendUsers::class, 'saveMyProfilePersonal'])->name('backend.users.saveMyProfilePersonal');
     });
 
 

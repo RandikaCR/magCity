@@ -1,10 +1,10 @@
 @extends('layouts.backend')
 
 @section('page_title')
-    Landscape
+    Blog
 
-    @if(isset($product))
-        #{{ $product->id }}
+    @if(isset($blog))
+        #{{ $blog->id }}
     @endif
 @endsection
 
@@ -51,9 +51,9 @@
 @section('header_buttons')
     <div class="row">
         <div class="col-sm-12 d-flex justify-content-end mb-3">
-            <a href="{{ url('admin/landscapes') }}" class="btn btn-primary">
+            <a href="{{ url('admin/blogs') }}" class="btn btn-primary">
                 <span class="mdi mdi-format-list-bulleted-square me-2"></span>
-                All Landscapes
+                All Blogs
             </a>
         </div>
     </div>
@@ -61,11 +61,42 @@
 
 @section('content')
 
-    <form method="POST" action="{{ route('backend.landscapes.store') }}">
+    <form method="POST" action="{{ route('backend.blogs.store') }}">
         @csrf
+        <input type="hidden" name="id" value="{{ isset($blog) ? $blog->id : '' }}">
+        <input type="hidden" id="temp_id" name="temp_id" value="{{ $temp_id }}">
+        <div class="row">
+            <div class="col-sm-8">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Blog Details</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-12 mb-4">
+                                <label>Slug</label>
+                                <input class="form-control" type="text" id="slug" name="slug" placeholder="Enter here...." value="{{ isset($blog) ? $blog->slug : '' }}" readonly>
+                                <label class="text-danger fw-bold mt-1 d-none" id="slug-warning">Slug already exists!</label>
+                            </div>
 
-        <div class="row justify-content-center">
-            <div class="col-sm-5">
+                            <div class="col-sm-12 mb-4">
+                                <label>Title*</label>
+                                <input class="form-control" type="text" id="main-title" name="title" placeholder="Enter here...." value="{{ isset($blog) ? $blog->title : '' }}">
+                            </div>
+
+                            <div class="col-sm-12 mb-4">
+                                <label>Content</label>
+                                <textarea id="content" name="contents">
+                                    {{ isset($blog) ? $blog->content : '' }}
+                                </textarea>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4">
                 <div class="card">
                     <div class="card-header">
                         <div class="d-flex justify-content-end align-items-center">
@@ -77,7 +108,7 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-12 mb-4">
-                                <label>Image</label>
+                                <label>Images</label>
                                 <div class="row">
                                     <div class="col-sm-12">
                                         <div class="form-group">
@@ -102,9 +133,28 @@
 
                                     </div>
                                     <div class="col-sm-12 d-flex mt-5">
-                                        <input type="hidden" name="image" id="image" value="">
                                         <div class="row" id="uploaded_image">
+                                            @if(!empty($images))
+                                                @foreach($images as $img )
+                                                    <div class="col-md-6 mb-3" id="row-{{ $img->id }}">
+                                                        <div class="d-flex align-items-center justify-content-center img-action img-border">
+                                                            <img class="img-fluid img-bordered" src="{{ url('assets/common/images/blogs/'.$img->image) }}">
+                                                            @if( $img->is_primary == 1 )
+                                                                <span class="badge bg-success" style="position: absolute;top: 10px;right: 10px;"><i class="mdi mdi-key"></i></span>
+                                                            @else
+                                                                <div class="img-overlay-area d-flex justify-content-center align-items-center">
+                                                                    <a href="javascript:void(0);" class="btn btn-danger btn-xs me-2 delete-image" data-id="{{ $img->id }}" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"><i class="mdi mdi-delete"></i></a>
+                                                                    <a href="javascript:void(0);" class="btn btn-success btn-xs primary-image" data-id="{{ $img->id }}" data-toggle="tooltip" data-placement="top" title="" data-original-title="Make this Primary Image?"><i class="mdi mdi-key"></i></a>
+                                                                </div>
+                                                            @endif
+
+
+                                                        </div>
+                                                    </div>
+                                                @endforeach
+                                            @endif
                                         </div>
+
                                     </div>
                                 </div>
 
@@ -116,6 +166,8 @@
             </div>
         </div>
     </form>
+
+    <input type="hidden" id="route_get_slug" value="{{ route('backend.blogs.slugGenerator') }}">
 
 @endsection
 
@@ -140,21 +192,68 @@
 
         function appendImage($img){
 
-            $image = "{{ url('assets/common/images/uploads') }}/" + $img.filename;
+            $image = "{{ url('assets/common/images/blogs') }}/" + $img.filename;
 
-            $item = $('<div></div>').addClass('col-md-12 mb-3').attr('id', $img.id);
+            $item = $('<div></div>').addClass('col-md-6 mb-3').attr('id', $img.id);
 
-            $('<div></div>').addClass('d-flex align-items-center justify-content-center img-action')
-                    .append($('<img>').addClass('img-fluid img-bordered').attr('src', $image)).appendTo($item);
+            if($img.is_primary == 1){
+                $('<div></div>').addClass('d-flex align-items-center justify-content-center img-action')
+                    .append($('<img>').addClass('img-fluid img-bordered').attr('src', $image))
+                    .append($('<span></span>').addClass('badge bg-success').css({'position' : 'absolute', 'top' : '10px', 'right' : '10px'})
+                        .append($('<i></i>').addClass('mdi mdi-key'))
+                    ).appendTo($item);
+            }
+            else{
+                $('<div></div>').addClass('d-flex align-items-center justify-content-center img-action img-border')
+                    .append($('<img>').addClass('img-fluid img-bordered').attr('src', $image))
+                    .append($('<div></div>').addClass('img-overlay-area d-flex justify-content-center align-items-center')
+                        .append(
+                            $('<a></a>').addClass('btn btn-danger btn-xs me-2 delete-image')
+                                .attr('href', 'javascript:void(0);')
+                                .attr('data-id', $img.id)
+                                .attr('data-toggle', 'tooltip')
+                                .attr('data-placement', 'top')
+                                .attr('title', 'Delete')
+                                .attr('data-original-title', 'Delete')
+                                .append($('<i></i>').addClass('mdi mdi-delete'))
+                        )
+                        .append(
+                            $('<a></a>').addClass('btn btn-success btn-xs primary-image')
+                                .attr('href', 'javascript:void(0);')
+                                .attr('data-id', $img.id)
+                                .attr('data-toggle', 'tooltip')
+                                .attr('data-placement', 'top')
+                                .attr('title', 'Make this Primary Image?')
+                                .attr('data-original-title', 'Make this Primary Image?')
+                                .append($('<i></i>').addClass('mdi mdi-key'))
+                        )
+                    ).appendTo($item);
+            }
 
             return $item;
         }
 
+        ClassicEditor.create(document.querySelector("#content"), {
+            toolbar: {
+                //removeItems: [ 'insertImage', 'blockQuote', 'link' ],
+                items: [
+                    'heading', '|', 'bold', 'italic', 'listItem', 'link', '|', 'undo', 'redo'
+                ]
+            },
+        }).then(function (e) {
+                e.ui.view.editable.element.style.height = "200px";
+            })
+            .catch(function (e) {
+                console.error(e);
+            });
+
+
+
         $image_thumb = $('#thumb_image_demo').croppie({
             enableExif: true,
             viewport: {
-                width:270,
-                height:152,
+                width:280,
+                height:147,
                 type:'square' //circle
             },
             boundary:{
@@ -181,8 +280,8 @@
                 type: 'canvas',
                 /*size: 'original'*/
                 size: {
-                    width: 1920,
-                    height: 1080
+                    width: 1200,
+                    height: 630
                 }
             }).then(function(response){
 
@@ -195,17 +294,19 @@
                 });
 
                 $.ajax({
-                    url: "{{ route('backend.landscapes.imageUpload') }}",
+                    url: "{{ route('backend.blogs.imageUpload') }}",
                     type: "POST",
                     data: {
                         image:response,
                         id: $id,
                     },
+                    beforeSend: function ($jqXHR, $obj) {
+                        $('#image-status').html('Uploading....');
+                    },
                     success: function ($data) {
                         $('#image-status').html($data.status);
                         $img = appendImage($data);
                         $('#uploaded_image').append($img);
-                        $('#image').val($data.filename);
                     }
                 });
 
@@ -279,7 +380,7 @@
 
                         setTimeout(function() {
                             $.ajax({
-                                url: "{{ route('backend.products.deleteImage') }}",
+                                url: "{{ route('backend.blogs.deleteImage') }}",
                                 type: 'POST',
                                 data: {
                                     id: $id,
@@ -336,7 +437,7 @@
 
                         setTimeout(function() {
                             $.ajax({
-                                url: "{{ route('backend.products.setPrimaryImage') }}",
+                                url: "{{ route('backend.blogs.setPrimaryImage') }}",
                                 type: 'POST',
                                 data: {
                                     id: $id,
@@ -377,69 +478,6 @@
                     }
                 });
 
-
-            });
-
-
-            $('.add-new-price-row').on('click', function ($e){
-                $.ajax({
-                    url: "{{ route('backend.products.getDetailsForPriceRow') }}",
-                    type: 'POST',
-                    data: {
-                        _token: csrf_token()
-                    },
-                    dataType: 'json',
-                    beforeSend: function ($jqXHR, $obj) {
-                        Swal.fire({
-                            title: "Processing...",
-                            text: "Please wait",
-                            imageUrl: "{{ asset('assets/common/images/ajax-loader.gif') }}",
-                            showConfirmButton: false,
-                            allowOutsideClick: false
-                        });
-                    },
-                    success: function ($response, $textStatus, $jqXHR) {
-                        Swal.close();
-                        $row = priceRow($response);
-                        $('#pricing-area').append($row);
-                    },
-                    error: function ($jqXHR, $textStatus, $errorThrown) {
-                        Swal.fire('Oops...', 'Something went wrong with the System!', 'error');
-                    }
-                });
-            });
-
-            $('#pricing-area').on('click', '.delete-price', function ($e){
-                $e.preventDefault();
-                $this = $(this);
-                $id = $($this).data('id');
-
-                Swal.fire({
-                    title: "Are you sure?",
-                    text: "You want to delete this Price!",
-                    icon: "warning",
-                    showCancelButton: !0,
-                    showLoaderOnConfirm: true,
-                    confirmButtonText: "Yes, Do it!",
-                    cancelButtonText: "No, cancel!",
-                    confirmButtonClass: "btn btn-primary w-xs me-2 mt-2",
-                    cancelButtonClass: "btn btn-danger w-xs mt-2",
-                    buttonsStyling: !1,
-                    showCloseButton: !0,
-                }).then((result) => {
-                    if (result.isConfirmed) {
-
-                        setTimeout(function() {
-                            Swal.fire('Done!', 'Price has been deleted!', 'success');
-
-                            $($this).parent().parent().fadeOut('slow');
-                            setTimeout(function (){
-                                $($this).parent().parent().remove();
-                            },1000);
-
-                        }, 50);
-                    }
-                });
 
             });
 

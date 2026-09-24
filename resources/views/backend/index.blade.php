@@ -1,7 +1,7 @@
 @extends('layouts.backend')
 
 @section('page_title')
-   Dashboard | Admin
+   Dashboard
 @endsection
 
 @section('breadcrumb')

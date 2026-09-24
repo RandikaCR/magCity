@@ -8,6 +8,11 @@
 @endsection
 
 @section('style')
+    <style type="text/css">
+        .services-card{
+            box-shadow: 0 1px 4px #ccc;
+        }
+    </style>
 @endsection
 
 @section('content')
@@ -37,21 +42,21 @@
             <div class="section-full bg-white py-5">
                 <div class="container">
                     <div class="row justify-content-center">
-                        <div class="col-sm-3">
+                        {{--<div class="col-sm-3">
                             <div class="blog-post latest-blog-1 date-style-3 skew-date">
                                 <div class="dlab-post-info">
                                     <div class="dlab-post-meta ">
                                         <p class="text-uppercase fw-bold mb-3 text-primary">Our Services</p>
                                     </div>
                                     <div class="dlab-post-text">
-                                        {{--<p class="mb-0 fw-medium font-20">A Better Process.</p>
-                                        <p class="mb-3 fw-medium font-20">A Better Experience.</p>--}}
+                                        --}}{{--<p class="mb-0 fw-medium font-20">A Better Process.</p>
+                                        <p class="mb-3 fw-medium font-20">A Better Experience.</p>--}}{{--
                                         <p class="font-14 mb-4">Enjoy exciting deals and seasonal promotions on selected vehicle care services. Experience premium automotive care at exceptional value.</p>
                                     </div>
                                 </div>
-                                {{--<div class="dlab-post-media dlab-img-effect zoom-slow">
+                                --}}{{--<div class="dlab-post-media dlab-img-effect zoom-slow">
                                     <a href="javascript:void(0);" class="site-button button-skew z-index1"> <span>Discover our Services</span><i class="fas fa-angle-right"></i> </a>
-                                </div>--}}
+                                </div>--}}{{--
                             </div>
                         </div>
                         <div class="col-sm-9 ps-sm-5 ps-2">
@@ -76,92 +81,141 @@
 
                             </div>
 
+                        </div>--}}
+
+                        <div class="col-sm-12 d-flex justify-content-center">
+                            <div class="blog-post latest-blog-1 date-style-3 skew-date">
+                                <div class="dlab-post-info">
+                                    <div class="dlab-post-meta text-center">
+                                        <p class="text-uppercase fw-bold mb-3 text-primary">Our Services</p>
+                                    </div>
+                                    <div class="dlab-post-text text-center">
+                                        <p class="mb-0 fw-medium font-20">A Better Process.</p>
+                                        <p class="mb-3 fw-medium font-20">A Better Experience.</p>
+                                        <p class="font-14 mb-4">Enjoy exciting deals and seasonal promotions on selected vehicle care services. Experience premium automotive care at exceptional value.</p>
+                                    </div>
+                                </div>
+                                {{--<div class="dlab-post-media dlab-img-effect zoom-slow">
+                                    <a href="javascript:void(0);" class="site-button button-skew z-index1"> <span>Discover our Services</span><i class="fas fa-angle-right"></i> </a>
+                                </div>--}}
+                            </div>
                         </div>
+
                     </div>
 
                     <div class="row mt-5">
-                        <div class="col-sm-12">
-                            <div class="services-carousel owl-carousel owl-none">
-                                <div class="s-item">
-                                    <div class="s-item-img-area">
-                                        <a href="{{ url('/services#service-running-repairs') }}">
-                                            <div class="s-item-img-overlay">
-                                                <div class="text-white text-center">
-                                                    <p class="font-20 text-uppercase font-weight-500">Running Repairs</p>
-                                                </div>
+                        <div class="col-sm-4 mb-5">
+                            <a href="{{ url('/services#service-running-repairs') }}">
+                                <div class="card services-card">
+                                    <div class="card-header p-0">
+                                        <div class="widget-project-box">
+                                            <div class="item">
+                                                <img src="{{ asset('assets/common/images/running-repairs-01.jpg') }}" alt="" class="img-fluid">
                                             </div>
-                                            <img class="img-fluid" src="{{ asset('assets/common/images/service-01.jpg') }}">
-                                        </a>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="text-center">
+                                            <p class="text-uppercase fw-bold mb-1 text-primary font-20">Running Repairs</p>
+                                        </div>
                                     </div>
                                 </div>
+                            </a>
+                        </div>
 
-                                <div class="s-item">
-                                    <div class="s-item-img-area">
-                                        <a href="{{ url('/services#service-collision-repair') }}">
-                                            <div class="s-item-img-overlay">
-                                                <div class="text-white text-center">
-                                                    <p class="font-20 text-uppercase font-weight-500">Collision Repairs</p>
-                                                </div>
+                        <div class="col-sm-4 mb-5">
+                            <a href="{{ url('/services#service-collision-repair') }}">
+                                <div class="card services-card">
+                                    <div class="card-header p-0">
+                                        <div class="widget-project-box">
+                                            <div class="item">
+                                                <img src="{{ asset('assets/common/images/collision-repairs-01.jpg') }}" alt="" class="img-fluid">
                                             </div>
-                                            <img class="img-fluid" src="{{ asset('assets/common/images/service-02.jpg') }}">
-                                        </a>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="text-center">
+                                            <p class="text-uppercase fw-bold mb-1 text-primary font-20">Collision Repair</p>
+                                        </div>
                                     </div>
                                 </div>
+                            </a>
+                        </div>
 
-                                <div class="s-item">
-                                    <div class="s-item-img-area">
-                                        <a href="{{ url('/services#service-vehicle-servicing') }}">
-                                            <div class="s-item-img-overlay">
-                                                <div class="text-white text-center">
-                                                    <p class="font-20 text-uppercase font-weight-500">Full Service</p>
-                                                </div>
+                        <div class="col-sm-4 mb-5">
+                            <a href="{{ url('/services#service-vehicle-servicing') }}">
+                                <div class="card services-card">
+                                    <div class="card-header p-0">
+                                        <div class="widget-project-box">
+                                            <div class="item">
+                                                <img src="{{ asset('assets/common/images/full-services.jpg') }}" alt="" class="img-fluid">
                                             </div>
-                                            <img class="img-fluid" src="{{ asset('assets/common/images/service-03.jpg') }}">
-                                        </a>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="text-center">
+                                            <p class="text-uppercase fw-bold mb-1 text-primary font-20">Full Service</p>
+                                        </div>
                                     </div>
                                 </div>
+                            </a>
+                        </div>
 
-                                <div class="s-item">
-                                    <div class="s-item-img-area">
-                                        <a href="{{ url('/services#service-tune-up') }}">
-                                            <div class="s-item-img-overlay">
-                                                <div class="text-white text-center">
-                                                    <p class="font-20 text-uppercase font-weight-500">Tune Up's</p>
-                                                </div>
+                        <div class="col-sm-4 mb-5">
+                            <a href="{{ url('/services#service-tune-up') }}">
+                                <div class="card services-card">
+                                    <div class="card-header p-0">
+                                        <div class="widget-project-box">
+                                            <div class="item">
+                                                <img src="{{ asset('assets/common/images/tune-up-01.jpg') }}" alt="" class="img-fluid">
                                             </div>
-                                            <img class="img-fluid" src="{{ asset('assets/common/images/service-04.jpg') }}">
-                                        </a>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="text-center">
+                                            <p class="text-uppercase fw-bold mb-1 text-primary font-20">Tune up</p>
+                                        </div>
                                     </div>
                                 </div>
+                            </a>
+                        </div>
 
-                                <div class="s-item">
-                                    <div class="s-item-img-area">
-                                        <a href="{{ url('/services#service-accessories') }}">
-                                            <div class="s-item-img-overlay">
-                                                <div class="text-white text-center">
-                                                    <p class="font-20 text-uppercase font-weight-500">Vehicle Accessories</p>
-                                                </div>
+                        <div class="col-sm-4 mb-5">
+                            <a href="{{ url('/services#service-accessories') }}">
+                                <div class="card services-card">
+                                    <div class="card-header p-0">
+                                        <div class="widget-project-box">
+                                            <div class="item">
+                                                <img src="{{ asset('assets/common/images/accessories-01.jpg') }}" alt="" class="img-fluid">
                                             </div>
-                                            <img class="img-fluid" src="{{ asset('assets/common/images/service-05.jpg') }}">
-                                        </a>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="text-center">
+                                            <p class="text-uppercase fw-bold mb-1 text-primary font-20">Accessories</p>
+                                        </div>
                                     </div>
                                 </div>
+                            </a>
+                        </div>
 
-                                <div class="s-item">
-                                    <div class="s-item-img-area">
-                                        <a href="{{ url('/services#service-vehicle-detailing') }}">
-                                            <div class="s-item-img-overlay">
-                                                <div class="text-white text-center">
-                                                    <p class="font-20 text-uppercase font-weight-500">Vehicle Detailing</p>
-                                                </div>
+                        <div class="col-sm-4 mb-5">
+                            <a href="{{ url('/services#service-vehicle-detailing') }}">
+                                <div class="card services-card">
+                                    <div class="card-header p-0">
+                                        <div class="widget-project-box">
+                                            <div class="item">
+                                                <img src="{{ asset('assets/common/images/vehicle-detailing-01.jpg') }}" alt="" class="img-fluid">
                                             </div>
-                                            <img class="img-fluid" src="{{ asset('assets/common/images/service-06.jpg') }}">
-                                        </a>
-
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="text-center">
+                                            <p class="text-uppercase fw-bold mb-1 text-primary font-20">Vehicle detailing</p>
+                                        </div>
                                     </div>
                                 </div>
-
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>

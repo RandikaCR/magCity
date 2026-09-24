@@ -1,19 +1,19 @@
 @extends('layouts.backend')
 
 @section('page_title')
-    All Products
+    All Blogs
 @endsection
 
 @section('breadcrumb')
     <div class="row">
         <div class="col-12">
             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                <h4 class="mb-sm-0">Products</h4>
+                <h4 class="mb-sm-0">Blogs</h4>
 
                 <div class="page-title-right">
                     <ol class="breadcrumb m-0">
-                        <li class="breadcrumb-item"><a href="javascript: void(0);">MP Admin</a></li>
-                        <li class="breadcrumb-item active">Products</li>
+                        <li class="breadcrumb-item"><a href="javascript: void(0);">Magcity Admin</a></li>
+                        <li class="breadcrumb-item active">Blogs</li>
                     </ol>
                 </div>
 
@@ -25,7 +25,7 @@
 @section('header_buttons')
     <div class="row">
         <div class="col-sm-12 d-flex justify-content-end mb-3">
-            <a href="{{ url('admin/products/create') }}" class="btn btn-primary">
+            <a href="{{ url('admin/blogs/create') }}" class="btn btn-primary">
                 <span class="mdi mdi-plus-box me-2"></span>
                 Add New
             </a>
@@ -63,7 +63,7 @@
                                     <span class="mdi mdi-magnify me-2"></span>
                                     Search
                                 </button>
-                                <a href="{{ url('admin/products') }}" class="btn btn-outline-dark waves-effect waves-light ms-2">
+                                <a href="{{ url('admin/blogs') }}" class="btn btn-outline-dark waves-effect waves-light ms-2">
                                     <span class="mdi mdi-restore me-2"></span>
                                     Clear
                                 </a>
@@ -80,7 +80,7 @@
         <div class="col-lg-12">
             <div class="card">
                 <div class="card-header align-items-center d-flex">
-                    <h4 class="card-title mb-0 flex-grow-1">All Products</h4>
+                    <h4 class="card-title mb-0 flex-grow-1">All Blogs</h4>
                     <div class="flex-shrink-0">
                     </div>
                 </div><!-- end card header -->
@@ -96,17 +96,11 @@
                                             <th class="text-center" scope="col">
                                                 <p class="mb-0">ID</p>
                                             </th>
-                                            <th scope="col" style="width: 5%;">
+                                            <th scope="col" style="width: 10%;">
                                                 <p class="mb-0"></p>
                                             </th>
                                             <th scope="col" style="width: 50%;">
-                                                <p class="mb-0">Product</p>
-                                            </th>
-                                            <th class="text-center" scope="col">
-                                                <p class="mb-0">Category</p>
-                                            </th>
-                                            <th class="text-center" scope="col">
-                                                <p class="mb-0">Display Order</p>
+                                                <p class="mb-0">Blog Title</p>
                                             </th>
                                             <th class="text-center" scope="col">
                                                 <p class="mb-0">Status</p>
@@ -117,37 +111,31 @@
                                         </tr>
                                         </thead>
                                         <tbody>
-                                        @foreach($products as $product)
-                                            <tr id="row-{{ $product->id }}">
+                                        @foreach($blogs as $blog)
+                                            <tr id="row-{{ $blog->id }}">
                                                 <td class="fw-medium text-center">
-                                                    <p class="mb-0">{{ $product->id }}</p>
+                                                    <p class="mb-0">{{ $blog->id }}</p>
                                                 </td>
                                                 <td>
                                                     <div class="bg-light rounded p-1">
-                                                        <img src="{{ asset('assets/common/images/uploads/' .$product->primary_image) }}" class="img-fluid d-block" alt="Img">
+                                                        <img src="{{ asset('assets/common/images/blogs/' .$blog->primary_image) }}" class="img-fluid d-block" alt="Img">
                                                     </div>
                                                 </td>
                                                 <td>
-                                                    <p class="mb-0">{{ $product->product }}</p>
+                                                    <p class="mb-1">{{ $blog->title }}</p>
                                                 </td>
                                                 <td class="text-center">
-                                                    <p class="mb-0">{{ $product->product_category->product_category }}</p>
-                                                </td>
-                                                <td class="text-center">
-                                                    <p class="mb-0">{{ $product->display_order }}</p>
-                                                </td>
-                                                <td class="text-center">
-                                                    <p class="mb-0"><span class="badge {{ $product->status()->class }}">{{ $product->status()->text }}</span></p>
+                                                    <p class="mb-0"><span class="badge {{ commonStatus($blog->status)['class'] }}">{{ commonStatus($blog->status)['text'] }}</span></p>
                                                 </td>
                                                 <td class="text-end">
                                                     <div class="d-flex justify-content-end align-items-center">
                                                         <div class="form-check form-switch form-switch-success form-switch-md">
-                                                            <input class="form-check-input status" data-id="{{ $product->id }}" type="checkbox" role="switch"  {{ ($product->status == 1) ? 'checked': '' }} >
+                                                            <input class="form-check-input status" data-id="{{ $blog->id }}" type="checkbox" role="switch"  {{ ($blog->status == 1) ? 'checked': '' }} >
                                                         </div>
                                                         <div>
-                                                            <a href="{{ url('products/' . $product->slug) }}" target="_blank" class="btn btn-primary btn-sm waves-effect waves-light" data-bs-toggle="tooltip" data-bs-placement="top" title="View"><span class="mdi mdi-magnify"></span></a>
-                                                            <a href="{{ route('backend.products.edit', $product->uuid) }}" class="btn btn-primary btn-sm waves-effect waves-light" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit"><span class="mdi mdi-pencil"></span></a>
-                                                            <a href="javascript:void(0);" class="btn btn-danger btn-sm waves-effect waves-light delete" data-id="{{ $product->id }}" data-bs-toggle="tooltip" data-bs-placement="top" title="Delete"><span class="mdi mdi-delete"></span></a>
+                                                            <a href="{{ url('blog/' . $blog->slug) }}" target="_blank" class="btn btn-primary btn-sm waves-effect waves-light" data-bs-toggle="tooltip" data-bs-placement="top" title="View"><span class="mdi mdi-magnify"></span></a>
+                                                            <a href="{{ route('backend.blogs.edit', $blog->id) }}" class="btn btn-primary btn-sm waves-effect waves-light" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit"><span class="mdi mdi-pencil"></span></a>
+                                                            <a href="javascript:void(0);" class="btn btn-danger btn-sm waves-effect waves-light delete" data-id="{{ $blog->id }}" data-bs-toggle="tooltip" data-bs-placement="top" title="Delete"><span class="mdi mdi-delete"></span></a>
                                                         </div>
                                                     </div>
                                                 </td>
@@ -164,7 +152,7 @@
 
                         <div class="mt-5">
                             {{--Paginaiton--}}
-                            {!! $products->links('vendor.pagination.backend') !!}
+                            {!! $blogs->links('vendor.pagination.backend') !!}
                         </div>
                     </div>
                 </div><!-- end card-body -->
@@ -213,7 +201,7 @@
 
                         setTimeout(function() {
                             $.ajax({
-                                url: "{{ route('backend.products.delete') }}",
+                                url: "{{ route('backend.blogs.delete') }}",
                                 type: 'POST',
                                 data: {
                                     id: $id,
@@ -230,7 +218,7 @@
                                     });
                                 },
                                 success: function ($response, $textStatus, $jqXHR) {
-                                    Swal.fire('Done!', 'Product has been deleted!', 'success');
+                                    Swal.fire('Done!', 'Blog has been deleted!', 'success');
 
                                     $($this).parent().parent().fadeOut('slow');
                                     setTimeout(function (){
@@ -250,7 +238,7 @@
 
             $('.table').on('change', '.status', function (){
                 $id = $(this).data('id');
-                $url = "{{ route('backend.products.status') }}";
+                $url = "{{ route('backend.blogs.status') }}";
                 $rowId = '#row-' + $id;
                 $.ajax({
                     url: $url,

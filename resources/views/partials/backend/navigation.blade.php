@@ -31,40 +31,27 @@
             </div>
             <ul class="navbar-nav" id="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link menu-link" href="{{ url('/admin') }}">
+                    <a class="nav-link menu-link {{ (request()->segment(2) == '') ? 'active' : '' }}" href="{{ url('/admin') }}">
                         <i class="mdi mdi-speedometer"></i> <span data-key="t-dashboard">Dashboard</span>
                     </a>
                 </li>
 
-                {{--<li class="nav-item">
-                    <a class="nav-link menu-link" href="#sidebarProducts" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarProducts">
-                        <i class="mdi mdi-gift"></i> <span data-key="t-raffles-main">Products</span>
+
+                <li class="nav-item">
+                    <a class="nav-link menu-link" href="#sidebarBlogs" data-bs-toggle="collapse" role="button" aria-expanded="{{ (request()->segment(2) == 'blogs') ? 'true' : 'false' }}" aria-controls="sidebarBlogs">
+                        <i class="mdi mdi-gift"></i> <span data-key="t-raffles-main">Blogs</span>
                     </a>
-                    <div class="collapse menu-dropdown" id="sidebarProducts">
+                    <div class="collapse menu-dropdown {{ (request()->segment(2) == 'blogs') ? 'show' : '' }}" id="sidebarBlogs">
                         <ul class="nav nav-sm flex-column">
                             <li class="nav-item">
-                                <a href="{{ url('/admin/products') }}" class="nav-link" data-key="t-products">All Products</a>
+                                <a href="{{ url('/admin/blogs') }}" class="nav-link {{ (request()->segment(2) == 'blogs' && request()->segment(3) == '') ? 'active' : '' }}" data-key="t-players">All Blogs</a>
                             </li>
                             <li class="nav-item">
-                                <a href="{{ url('/admin/products/create') }}" class="nav-link" data-key="t-products-add">Add New</a>
+                                <a href="{{ url('/admin/blogs/create') }}" class="nav-link {{ (request()->segment(2) == 'blogs' && request()->segment(3) == 'create') ? 'active' : '' }}" data-key="t-client-add">Add New</a>
                             </li>
                         </ul>
                     </div>
                 </li>
-
-
-                <li class="nav-item">
-                    <a class="nav-link menu-link" href="{{ url('/admin/machinery-hires') }}">
-                        <i class="mdi mdi-truck-plus"></i> <span data-key="t-machinery-hires">Machinery Hires</span>
-                    </a>
-                </li>
-
-                --}}
-
-
-
-                {{--<li class="menu-title"><span data-key="t-system">System</span></li>--}}
-
 
             </ul>
         </div>
