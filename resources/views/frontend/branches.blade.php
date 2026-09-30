@@ -37,7 +37,7 @@
                             <!-- ===================== MAP ===================== -->
                             <div class="map-side">
                                 <div class="map-toolbar">
-                                    <div class="map-title">Sri Lanka<small>Schematic — not to scale</small></div>
+                                    <div class="map-title">Sri Lanka<small>Schematic — not to scale · approx. provinces</small></div>
                                     <div class="seg" id="filterSeg">
                                         <button data-filter="all" class="active"><span class="swatch"></span>All</button>
                                         <button data-filter="main"><span class="swatch"></span>Mag City</button>
@@ -47,25 +47,112 @@
 
                                 <div class="map-stage">
                                     <div class="map-clip">
-                                        <svg class="map" id="slMap" viewBox="0 0 380 570" xmlns="http://www.w3.org/2000/svg">
+                                        <svg class="map" id="slMap" viewBox="-24 -26 460 630" xmlns="http://www.w3.org/2000/svg">
                                             <defs>
+                                                <!-- island outline, defined once and reused for land, shelf glow, clip -->
+                                                <path id="landShape" d="M 76.15,18.12 L 88.72,18.81 L 102.13,18.47 L 111.52,20.28 L 127.63,40.6 L 171.46,77.01 L 195.3,114.02 L 197.47,122.12 L 200.79,129.12 L 206.51,131.04 L 211.33,134.24 L 235.15,169.96 L 237.9,177.03 L 237.5,184.81 L 238.91,190.6 L 245.14,193.49 L 252.91,195.01 L 257.99,200.38 L 264.44,228.9 L 264.44,237.8 L 266.24,241.62 L 296.25,286.01 L 297.99,291.41 L 297.67,295.45 L 298.53,298.94 L 304.34,306.79 L 313.41,327.93 L 318.03,332.73 L 323.54,351.21 L 323.91,386.56 L 321.88,402.28 L 316.27,421.43 L 309.63,440.15 L 302.43,453.67 L 292.58,465.11 L 258.92,489.42 L 249.28,494.31 L 205.45,509.55 L 173.15,523.97 L 143.3,527.89 L 113.43,519.92 L 90.93,501.0 L 79.41,473.12 L 71.53,444.08 L 60.07,411.78 L 51.27,312.04 L 47.07,284.16 L 40.25,248.64 L 40.93,233.25 L 45.74,218.48 L 45.73,250.86 L 50.15,254.87 L 53.47,250.71 L 56.48,217.18 L 58.96,203.0 L 70.85,166.06 L 71.09,159.51 L 69.04,145.62 L 69.16,138.65 L 86.94,112.73 L 91.49,97.65 L 93.94,82.22 L 92.97,65.54 L 89.75,49.11 L 104.1,54.35 L 112.0,60.07 L 120.04,63.94 L 126.58,61.96 L 134.47,61.89 L 128.85,52.94 L 112.15,44.69 L 84.45,39.6 L 75.78,33.07 L 72.45,27.4 L 74.15,20.77 L 76.15,18.12 Z"/>
+                                                <clipPath id="landClip"><use href="#landShape"/></clipPath>
+
+                                                <!-- ocean depth: deep blue at the edges, lighter toward the middle -->
+                                                <radialGradient id="seaBase" cx="50%" cy="48%" r="75%">
+                                                    <stop offset="0" stop-color="#5DAFD0"/>
+                                                    <stop offset="0.55" stop-color="#3F93BE"/>
+                                                    <stop offset="1" stop-color="#26709F"/>
+                                                </radialGradient>
+                                                <radialGradient id="seaVignette" cx="50%" cy="50%" r="72%">
+                                                    <stop offset="0.55" stop-color="#0A3557" stop-opacity="0"/>
+                                                    <stop offset="1" stop-color="#0A3557" stop-opacity="0.30"/>
+                                                </radialGradient>
+                                                <linearGradient id="seaSheen" x1="0" y1="0" x2="1" y2="1">
+                                                    <stop offset="0" stop-color="#fff" stop-opacity="0.16"/>
+                                                    <stop offset="0.45" stop-color="#fff" stop-opacity="0"/>
+                                                    <stop offset="1" stop-color="#fff" stop-opacity="0.05"/>
+                                                </linearGradient>
+
+                                                <!-- soft blurs for the shallow-water shelf around the coast -->
+                                                <filter id="blur14" x="-40%" y="-25%" width="180%" height="150%"><feGaussianBlur stdDeviation="14"/></filter>
+                                                <filter id="blur9"  x="-40%" y="-25%" width="180%" height="150%"><feGaussianBlur stdDeviation="9"/></filter>
+                                                <filter id="blur5"  x="-40%" y="-25%" width="180%" height="150%"><feGaussianBlur stdDeviation="5"/></filter>
+                                                <filter id="blur2"  x="-40%" y="-25%" width="180%" height="150%"><feGaussianBlur stdDeviation="2.2"/></filter>
+                                                <filter id="blur1"  x="-40%" y="-25%" width="180%" height="150%"><feGaussianBlur stdDeviation="0.9"/></filter>
+
+                                                <!-- wave texture: long soft swells + fine glints -->
+                                                <filter id="swell" x="-24" y="-26" width="460" height="630" filterUnits="userSpaceOnUse">
+                                                    <feTurbulence type="fractalNoise" baseFrequency="0.011 0.035" numOctaves="3" seed="11"/>
+                                                    <feColorMatrix type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 1.9 -0.78"/>
+                                                </filter>
+                                                <filter id="glint" x="-24" y="-26" width="460" height="630" filterUnits="userSpaceOnUse">
+                                                    <feTurbulence type="fractalNoise" baseFrequency="0.07 0.22" numOctaves="2" seed="4"/>
+                                                    <feColorMatrix type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 5 -2.85"/>
+                                                </filter>
+
                                                 <filter id="landShadow" x="-30%" y="-30%" width="160%" height="160%">
-                                                    <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#0B3D91" flood-opacity="0.12"/>
+                                                    <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#0A3357" flood-opacity="0.35"/>
                                                 </filter>
                                                 <filter id="pinShadow" x="-60%" y="-60%" width="220%" height="220%">
                                                     <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#0F1420" flood-opacity="0.35"/>
                                                 </filter>
                                             </defs>
 
+                                            <!-- ============ SEA ============ -->
+                                            <g class="sea" pointer-events="none">
+                                                <rect x="-34" y="-36" width="480" height="650" fill="url(#seaBase)"/>
+                                                <rect x="-24" y="-26" width="460" height="630" filter="url(#swell)" opacity="0.20"/>
+                                                <rect x="-24" y="-26" width="460" height="630" filter="url(#glint)" opacity="0.11"/>
+                                                <rect x="-34" y="-36" width="480" height="650" fill="url(#seaSheen)"/>
+                                                <rect x="-34" y="-36" width="480" height="650" fill="url(#seaVignette)"/>
+
+                                                <!-- shallow shelf: lighter, greener water hugging the coastline -->
+                                                <g transform="translate(24,16)" fill="none" stroke-linejoin="round" stroke-linecap="round">
+                                                    <use href="#landShape" stroke="#5CC3D3" stroke-width="96" opacity="0.30" filter="url(#blur14)"/>
+                                                    <use href="#landShape" stroke="#7FD3DD" stroke-width="58" opacity="0.42" filter="url(#blur9)"/>
+                                                    <use href="#landShape" stroke="#A6E3E6" stroke-width="32" opacity="0.55" filter="url(#blur5)"/>
+                                                    <use href="#landShape" stroke="#CDF1F0" stroke-width="15" opacity="0.75" filter="url(#blur2)"/>
+                                                    <!-- surf / foam line -->
+                                                    <use href="#landShape" stroke="#FFFFFF" stroke-width="4.2" opacity="0.85" filter="url(#blur1)"/>
+                                                    <path d="M 74.48,42.14 L 66.28,43.57 L 59.82,34.79 L 58.28,31.05 L 59.97,28.45 L 61.76,27.14 L 63.88,27.56 L 66.94,35.74 L 74.48,42.14 Z" stroke="#CDF1F0" stroke-width="10" opacity="0.7" filter="url(#blur2)"/>
+                                                    <path d="M 62.09,118.66 L 65.87,128.65 L 55.07,121.81 L 47.97,116.15 L 45.46,111.55 L 60.15,116.68 L 62.09,118.66 Z" stroke="#CDF1F0" stroke-width="10" opacity="0.7" filter="url(#blur2)"/>
+                                                </g>
+
+                                                <!-- sea names -->
+                                                <g class="sea-label">
+                                                    <text x="398" y="262" text-anchor="middle">Bay of Bengal</text>
+                                                    <text x="190" y="592" text-anchor="middle">Indian Ocean</text>
+                                                    <text transform="translate(16,232) rotate(-90)" text-anchor="middle">Gulf of Mannar</text>
+                                                    <text transform="translate(16,420) rotate(-90)" text-anchor="middle">Laccadive Sea</text>
+                                                </g>
+                                            </g>
+
                                             <g transform="translate(24,16)">
-                                                <path class="land" d="M 76.15,18.12 L 88.72,18.81 L 102.13,18.47 L 111.52,20.28 L 127.63,40.6 L 171.46,77.01 L 195.3,114.02 L 197.47,122.12 L 200.79,129.12 L 206.51,131.04 L 211.33,134.24 L 235.15,169.96 L 237.9,177.03 L 237.5,184.81 L 238.91,190.6 L 245.14,193.49 L 252.91,195.01 L 257.99,200.38 L 264.44,228.9 L 264.44,237.8 L 266.24,241.62 L 296.25,286.01 L 297.99,291.41 L 297.67,295.45 L 298.53,298.94 L 304.34,306.79 L 313.41,327.93 L 318.03,332.73 L 323.54,351.21 L 323.91,386.56 L 321.88,402.28 L 316.27,421.43 L 309.63,440.15 L 302.43,453.67 L 292.58,465.11 L 258.92,489.42 L 249.28,494.31 L 205.45,509.55 L 173.15,523.97 L 143.3,527.89 L 113.43,519.92 L 90.93,501.0 L 79.41,473.12 L 71.53,444.08 L 60.07,411.78 L 51.27,312.04 L 47.07,284.16 L 40.25,248.64 L 40.93,233.25 L 45.74,218.48 L 45.73,250.86 L 50.15,254.87 L 53.47,250.71 L 56.48,217.18 L 58.96,203.0 L 70.85,166.06 L 71.09,159.51 L 69.04,145.62 L 69.16,138.65 L 86.94,112.73 L 91.49,97.65 L 93.94,82.22 L 92.97,65.54 L 89.75,49.11 L 104.1,54.35 L 112.0,60.07 L 120.04,63.94 L 126.58,61.96 L 134.47,61.89 L 128.85,52.94 L 112.15,44.69 L 84.45,39.6 L 75.78,33.07 L 72.45,27.4 L 74.15,20.77 L 76.15,18.12 Z"/>
+                                                <use class="land" href="#landShape"/>
+
+                                                <!-- province borders: thin lines clipped to the island -->
+                                                <g class="prov" clip-path="url(#landClip)">
+                                                    <path d="M 39.2,187.9 L 72.7,187.9 L 99.5,174.5 L 126.3,167.8 L 153.1,154.4 L 179.9,141.0 L 200.0,127.6 L 226.8,116.8"/>
+                                                    <path d="M 76.7,187.9 L 76.7,208.0 L 92.8,228.1 L 112.9,244.1 L 133.0,254.9 L 139.7,257.5"/>
+                                                    <path d="M 200.0,127.6 L 202.7,167.8 L 210.7,194.6 L 220.1,221.4 L 240.2,261.6 L 233.5,301.8"/>
+                                                    <path d="M 200.0,315.2 L 213.4,315.2 L 233.5,301.8"/>
+                                                    <path d="M 139.7,257.5 L 162.5,257.5 L 179.9,268.3 L 193.3,288.4 L 200.0,315.2"/>
+                                                    <path d="M 139.7,257.5 L 146.4,288.4 L 135.7,308.5 L 126.3,328.6 L 130.3,346.0"/>
+                                                    <path d="M 95.5,352.7 L 112.9,346.0 L 130.3,346.0"/>
+                                                    <path d="M 39.2,344.6 L 57.9,344.6 L 72.7,348.7 L 95.5,352.7"/>
+                                                    <path d="M 119.6,449.2 L 122.3,429.1 L 112.9,409.0 L 112.9,388.9 L 103.5,372.8 L 95.5,352.7"/>
+                                                    <path d="M 66.0,466.6 L 78.0,465.2 L 95.5,463.9 L 106.2,458.5 L 119.6,449.2"/>
+                                                    <path d="M 119.6,449.2 L 133.0,466.6 L 153.1,478.6 L 179.9,477.3 L 200.0,482.7 L 206.7,476.0"/>
+                                                    <path d="M 130.3,346.0 L 143.7,359.4 L 157.1,382.2 L 153.1,402.3 L 153.1,415.7 L 170.5,422.4 L 183.9,418.3"/>
+                                                    <path d="M 206.7,476.0 L 197.3,449.2 L 183.9,418.3"/>
+                                                    <path d="M 200.0,315.2 L 193.3,342.0 L 189.3,362.1 L 193.3,382.2 L 193.3,395.6 L 183.9,418.3"/>
+                                                    <path d="M 233.5,301.8 L 242.9,335.3 L 256.3,362.1 L 287.1,388.9 L 313.9,422.4 L 334.0,435.8"/>
+                                                    <path d="M 206.7,476.0 L 226.8,471.9 L 246.9,474.6 L 267.0,480.0 L 287.1,466.6 L 304.5,462.6 L 327.3,462.6"/>
+                                                </g>
+
                                                 <path class="islet" d="M 74.48,42.14 L 66.28,43.57 L 59.82,34.79 L 58.28,31.05 L 59.97,28.45 L 61.76,27.14 L 63.88,27.56 L 66.94,35.74 L 74.48,42.14 Z"/>
                                                 <path class="islet" d="M 62.09,118.66 L 65.87,128.65 L 55.07,121.81 L 47.97,116.15 L 45.46,111.55 L 60.15,116.68 L 62.09,118.66 Z"/>
 
                                                 <!-- compass -->
-                                                <g transform="translate(300,26)">
+                                                <g transform="translate(372,44)">
                                                     <line class="compass-line" x1="0" y1="14" x2="0" y2="0"/>
-                                                    <polygon points="0,-4 3,3 -3,3" fill="#9AA1AC"/>
+                                                    <polygon points="0,-4 3,3 -3,3" fill="#FFFFFF"/>
                                                     <text class="compass" x="0" y="26" text-anchor="middle">N</text>
                                                 </g>
 
@@ -332,20 +419,13 @@
     <script>
         /* ---------------- DATA ---------------- */
         const locations = [
-            { id:1, name:"Colombo — Head Office", type:"main", x:60.62, y:398.24,
-                addr:"320A, T.B. Jaya Mawatha, Colombo 10", phone:"+94 11 473 4020", email:"info@magcitylk.com" },
-            { id:2, name:"Nugegoda", type:"main", x:65.25, y:407.08,
-                addr:"344, Old Kottawa Road, Nugegoda 10250", phone:"+94 11 219 9799", email:"nugegoda@magcitylk.com" },
-            { id:3, name:"Ratmalana", type:"main", x:63.42, y:412.77,
-                addr:"652, Galle Road, Ratmalana 10390", phone:"+94 11 262 6333", email:"ratmalana@magcitylk.com" },
-            { id:4, name:"Galle", type:"main", x:108.84, y:518.83,
-                addr:"4, Hirimbura Cross Road, Galle 80000", phone:"+94 91 222 8388", email:"galle@magcitylk.com" },
-            { id:5, name:"Gatambe", type:"main", x:150.84, y:355.83,
-                addr:"964, Peradeniya Road, Gatambe 20000", phone:"+94 81 238 8699", email:"gatambe@magcitylk.com" },
-            { id:6, name:"Kandy — CARS Body Shop", type:"subsidiary", x:162.38, y:350.59,
-                addr:"04, William Gopallawa Mawatha, Kandy 20000", phone:"+94 71 585 3092", email:"carskandy@carsbodyshoplk.com" },
-            { id:7, name:"Pallekele — CARS Body Shop", type:"subsidiary", x:171.78, y:351.68,
-                addr:"125, Kandy Industrial Zone, Pallekele 60622", phone:"+94 76 825 6645", email:"carspallekele@carsbodyshoplk.com" },
+            { id:1, name:"Colombo — Head Office", type:"main", x:60.62, y:398.24, addr:"320A, T.B. Jaya Mawatha, Colombo 10", phone:"+94 11 473 4020", email:"info@magcitylk.com" },
+            { id:2, name:"Nugegoda", type:"main", x:65.25, y:407.08, addr:"344, Old Kottawa Road, Nugegoda 10250", phone:"+94 11 219 9799", email:"nugegoda@magcitylk.com" },
+            { id:3, name:"Ratmalana", type:"main", x:63.42, y:412.77, addr:"652, Galle Road, Ratmalana 10390", phone:"+94 11 262 6333", email:"ratmalana@magcitylk.com" },
+            { id:4, name:"Galle", type:"main", x:108.84, y:518.83, addr:"4, Hirimbura Cross Road, Galle 80000", phone:"+94 91 222 8388", email:"galle@magcitylk.com" },
+            { id:5, name:"Gatambe", type:"main", x:150.84, y:355.83, addr:"964, Peradeniya Road, Gatambe 20000", phone:"+94 81 238 8699", email:"gatambe@magcitylk.com" },
+            { id:6, name:"Kandy — CARS Body Shop", type:"subsidiary", x:162.38, y:350.59, addr:"04, William Gopallawa Mawatha, Kandy 20000", phone:"+94 71 585 3092", email:"carskandy@carsbodyshoplk.com" },
+            { id:7, name:"Pallekele — CARS Body Shop", type:"subsidiary", x:171.78, y:351.68, addr:"125, Kandy Industrial Zone, Pallekele 60622", phone:"+94 76 825 6645", email:"carspallekele@carsbodyshoplk.com" },
         ];
 
         const PIN_D = "M12 0C5.4 0 0 5.4 0 12c0 9 12 20 12 20s12-11 12-20C24 5.4 18.6 0 12 0z";
@@ -364,6 +444,7 @@
             const g = document.createElementNS('http://www.w3.org/2000/svg','g');
             g.setAttribute('class', 'pin ' + loc.type);
             g.dataset.id = loc.id;
+            g.dataset.x = loc.x; g.dataset.y = loc.y;
 
             const tx = (loc.x - 12 * PIN_SCALE).toFixed(2);
             const ty = (loc.y - 24 * PIN_SCALE).toFixed(2);
@@ -385,9 +466,10 @@
 
             g.appendChild(ring); g.appendChild(shape); g.appendChild(num);
 
-            g.addEventListener('mouseenter', ()=> showPopup(loc));
-            g.addEventListener('mouseleave', scheduleHidePopup);
-            g.addEventListener('click', (e)=>{ e.stopPropagation(); setActive(loc.id); });
+            // Desktop: smooth zoom-in on hover (mouse only). Touch: zoom happens on tap/click.
+            g.addEventListener('pointerenter', (e)=>{ if(e.pointerType === 'mouse') hoverEnter(loc); });
+            g.addEventListener('pointerleave', (e)=>{ if(e.pointerType === 'mouse') scheduleHidePopup(); });
+            g.addEventListener('click', (e)=>{ e.stopPropagation(); setActive(loc.id, e.pointerType === 'mouse' ? 'keep' : 'center'); });
 
             return g;
         }
@@ -423,7 +505,8 @@
             popup.style.setProperty('--shift-x', '0px');
             const pt = svg.createSVGPoint();
             pt.x = loc.x + GROUP_OFFSET.x;
-            pt.y = loc.y + GROUP_OFFSET.y - 28; // just above the pin tip
+            const k = Math.pow(vb.w / VB.w, PIN_SHRINK);
+            pt.y = loc.y + GROUP_OFFSET.y - 28 * k; // just above the (scaled) pin tip
             const ctm = svg.getScreenCTM();
             const screenPt = pt.matrixTransform(ctm);
             const stageRect = stageEl.getBoundingClientRect();
@@ -448,7 +531,7 @@
         }
         function hidePopup(){ popup.classList.remove('show'); }
         function scheduleHidePopup(){
-            hidePopupTimer = setTimeout(()=>{ if(activeId == null) hidePopup(); }, 160);
+            hidePopupTimer = setTimeout(()=>{ if(activeId == null){ hidePopup(); zoomOut(); } }, 380);
         }
         // Keep the popup open while the cursor is over the card itself.
         popup.addEventListener('mouseenter', ()=> clearTimeout(hidePopupTimer));
@@ -467,6 +550,7 @@
                 if(loc.id === activeId) pin.classList.add('active');
                 pinLayer.appendChild(pin);
             });
+            updatePinScale();
         }
 
         function renderList(){
@@ -500,7 +584,7 @@
             });
         }
 
-        function setActive(id){
+        function setActive(id, mode='center'){
             activeId = (activeId === id) ? null : id;
             renderPins();
             document.querySelectorAll('.loc').forEach(el=>{
@@ -510,9 +594,13 @@
                 const el = document.querySelector('.loc[data-id="'+activeId+'"]');
                 if(el) el.scrollIntoView({ behavior:'smooth', block:'nearest' });
                 const loc = locations.find(l=>l.id===activeId);
-                if(loc) showPopup(loc);
+                if(loc){
+                    if(focusId === loc.id && !anim){ showPopup(loc); }        // already zoomed here (e.g. via hover)
+                    else { hidePopup(); focusPin(loc, mode, ()=> showPopup(loc)); }
+                }
             } else {
                 hidePopup();
+                zoomOut();
             }
         }
 
@@ -523,6 +611,7 @@
                 renderPins();
                 document.querySelectorAll('.loc').forEach(el=> el.classList.remove('active'));
                 hidePopup();
+                zoomOut();
             }
         });
 
@@ -533,23 +622,95 @@
             seg.querySelectorAll('button').forEach(b=> b.classList.toggle('active', b===btn));
             if(activeId){
                 const loc = locations.find(l=>l.id===activeId);
-                if(loc && filter !== 'all' && loc.type !== filter) activeId = null;
+                if(loc && filter !== 'all' && loc.type !== filter){ activeId = null; hidePopup(); zoomOut(); }
             }
             renderPins();
             renderList();
         });
 
-        renderPins();
-        renderList();
-
         /* ---------------- ZOOM / PAN ---------------- */
-        const VB = { x: 0, y: 0, w: 380, h: 570 }; // original viewBox, matches svg's base
+        const VB = { x: -24, y: -26, w: 460, h: 630 }; // original viewBox, matches svg's base
         let vb = { ...VB };
         const ZOOM_MIN = 1;   // 1x = fully zoomed out (original view)
         const ZOOM_MAX = 6;   // 6x = closest zoom in
 
+        const PIN_ZOOM = 3;       // how far we zoom in on a pin
+        const PIN_SHRINK = 0.6;   // pins grow only a little while the map zooms (keeps them tidy)
+        let anim = null;          // running zoom animation
+        let focusId = null;       // pin we are currently zoomed onto
+
+        function updatePinScale(){
+            const k = Math.pow(vb.w / VB.w, PIN_SHRINK);
+            pinLayer.querySelectorAll('.pin').forEach(g=>{
+                const x = g.dataset.x, y = g.dataset.y;
+                g.setAttribute('transform', `translate(${x},${y}) scale(${k}) translate(${-x},${-y})`);
+            });
+        }
+
+        function easeInOutCubic(t){ return t < .5 ? 4*t*t*t : 1 - Math.pow(-2*t + 2, 3) / 2; }
+        function cancelAnim(){ if(anim){ anim.cancelled = true; anim = null; } }
+
+        // Smoothly move the viewBox to `to`. When an anchor point is given, it is
+        // interpolated so that point glides instead of the map "swimming" during zoom.
+        function animateTo(to, anchor, done, dur = 700){
+            cancelAnim();
+            const minW = VB.w / ZOOM_MAX;
+            to = { ...to };
+            to.w = Math.min(Math.max(to.w, minW), VB.w); to.h = to.w * (VB.h / VB.w);
+            to.x = Math.min(Math.max(to.x, VB.x), VB.x + VB.w - to.w);
+            to.y = Math.min(Math.max(to.y, VB.y), VB.y + VB.h - to.h);
+            const from = { ...vb };
+            const ax = anchor ? anchor.ax : from.x + from.w/2, ay = anchor ? anchor.ay : from.y + from.h/2;
+            const fx0 = (ax - from.x) / from.w, fy0 = (ay - from.y) / from.h;
+            const fx1 = (ax - to.x) / to.w,     fy1 = (ay - to.y) / to.h;
+            const t0 = performance.now();
+            const me = anim = { cancelled:false };
+            function step(now){
+                if(me.cancelled) return;
+                const p = Math.min(1, (now - t0) / dur), e = easeInOutCubic(p);
+                vb.w = from.w * Math.pow(to.w / from.w, e);           // zoom in log space = even-feeling zoom
+                vb.h = vb.w * (VB.h / VB.w);
+                vb.x = ax - (fx0 + (fx1 - fx0) * e) * vb.w;
+                vb.y = ay - (fy0 + (fy1 - fy0) * e) * vb.h;
+                vb.x = Math.min(Math.max(vb.x, VB.x), VB.x + VB.w - vb.w);
+                vb.y = Math.min(Math.max(vb.y, VB.y), VB.y + VB.h - vb.h);
+                applyViewBox(); updatePinScale();
+                if(p < 1) requestAnimationFrame(step);
+                else { anim = null; if(done) done(); }
+            }
+            requestAnimationFrame(step);
+        }
+
+        function pinAnchor(loc){ return { ax: loc.x + GROUP_OFFSET.x, ay: loc.y + GROUP_OFFSET.y - 9 }; }
+
+        // mode 'keep'  : pin stays under the cursor while the map zooms around it (hover)
+        // mode 'center': pin glides to the middle of the map (tap / list click)
+        function focusPin(loc, mode, done){
+            const a = pinAnchor(loc);
+            const w = VB.w / PIN_ZOOM, h = w * (VB.h / VB.w);
+            let fx = 0.5, fy = 0.6;
+            if(mode === 'keep'){ fx = (a.ax - vb.x) / vb.w; fy = (a.ay - vb.y) / vb.h; }
+            focusId = loc.id;
+            animateTo({ x: a.ax - fx*w, y: a.ay - fy*h, w, h }, a, done);
+        }
+
+        function zoomOut(){
+            const loc = locations.find(l => l.id === focusId);
+            focusId = null;
+            if(vb.w >= VB.w - 0.01) return;
+            animateTo({ ...VB }, loc ? pinAnchor(loc) : null);
+        }
+
+        function hoverEnter(loc){
+            clearTimeout(hidePopupTimer);
+            if(focusId === loc.id && !anim){ showPopup(loc); return; }
+            hidePopup();
+            focusPin(loc, 'keep', ()=> showPopup(loc));
+        }
+
         function applyViewBox(){
             svg.setAttribute('viewBox', `${vb.x} ${vb.y} ${vb.w} ${vb.h}`);
+            updatePinScale();
         }
 
         function clampViewBox(){
@@ -583,6 +744,7 @@
         // Mouse wheel / trackpad zoom, centered on the cursor
         svg.addEventListener('wheel', (e)=>{
             e.preventDefault();
+            cancelAnim();
             const pt = svgPointFromClient(e.clientX, e.clientY);
             const factor = e.deltaY < 0 ? 1.18 : 1 / 1.18;
             zoomAt(factor, pt.x, pt.y);
@@ -590,6 +752,7 @@
 
         // Double-click / double-tap to zoom in a step
         svg.addEventListener('dblclick', (e)=>{
+            cancelAnim();
             const pt = svgPointFromClient(e.clientX, e.clientY);
             zoomAt(1.6, pt.x, pt.y);
         });
@@ -602,6 +765,8 @@
         let pinchStartVb = null;
 
         svg.addEventListener('pointerdown', (e)=>{
+            if(e.target.closest && e.target.closest('.pin')) return;   // let pin taps/clicks through
+            cancelAnim();
             svg.setPointerCapture(e.pointerId);
             activePointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
 
@@ -654,15 +819,20 @@
 
         // On-screen zoom buttons
         document.getElementById('zoomIn').addEventListener('click', ()=>{
+            cancelAnim();
             zoomAt(1.4, vb.x + vb.w / 2, vb.y + vb.h / 2);
         });
         document.getElementById('zoomOut').addEventListener('click', ()=>{
+            cancelAnim();
             zoomAt(1 / 1.4, vb.x + vb.w / 2, vb.y + vb.h / 2);
         });
         document.getElementById('zoomReset').addEventListener('click', ()=>{
-            vb = { ...VB };
-            applyViewBox();
+            focusId = null;
+            animateTo({ ...VB }, null);
         });
+
+        renderPins();
+        renderList();
     </script>
 
     <script>

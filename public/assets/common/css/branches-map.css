@@ -19,6 +19,7 @@
     --land: #E9F0F8;
     --land-line: #C4D3E4;
     --land-shadow: rgba(11,61,145,0.10);
+    --prov-line: #8DA6C4;
     --water-a: #EFF6FC;
     --water-b: #E4EEF8;
 
@@ -27,6 +28,8 @@
     --shadow-card: 0 1px 2px rgba(16,20,30,0.04), 0 18px 40px -22px rgba(16,20,30,0.22);
 }
 
+
+.wrap{ max-width: 1140px; margin: 0 auto; }
 
 /* ---------- PAGE HEADER ---------- */
 .top-row{
@@ -119,7 +122,7 @@ h1 span{ color: var(--red); }
 .seg button.active .swatch{ box-shadow: 0 0 0 2px rgba(255,255,255,0.4); }
 
 .map-stage{ position: relative; flex: 1; display:flex; align-items:center; justify-content:center; padding: 8px 0 0; }
-.map-clip{ position:relative; width:100%; max-width:340px; overflow:hidden; border-radius: 10px; }
+.map-clip{ position:relative; width:100%; max-width:400px; overflow:hidden; border-radius: 14px; background:#3F93BE; box-shadow: 0 0 0 1px rgba(10,53,87,.18), inset 0 0 24px rgba(10,53,87,.25), 0 14px 30px -18px rgba(10,53,87,.5); }
 svg.map{ width: 100%; height: auto; display:block; overflow: visible; cursor: grab; touch-action: none; }
 svg.map:active{ cursor: grabbing; }
 
@@ -139,11 +142,16 @@ svg.map:active{ cursor: grabbing; }
 .zoom-btn:active{ transform: scale(0.92); }
 .zoom-btn.reset{ font-size:13px; }
 
-.land{ fill: var(--land); stroke: var(--land-line); stroke-width: 1.5; stroke-linejoin: round; filter: url(#landShadow); }
+.land{ fill: var(--land); stroke: var(--land-line); stroke-width: 1.2; stroke-linejoin: round; filter: url(#landShadow); }
 .islet{ fill: var(--land); stroke: var(--land-line); stroke-width: 1; }
 
-.compass{ font-size:9px; font-weight:800; fill: var(--ink-faint); letter-spacing:.04em; }
-.compass-line{ stroke: var(--ink-faint); stroke-width:1; }
+/* thin province borders */
+.prov path{ fill:none; stroke: var(--prov-line); stroke-width: .8px; vector-effect: non-scaling-stroke; stroke-linejoin: round; stroke-linecap: round; stroke-dasharray: 4 3; }
+
+.sea-label text{ font-size: 8.5px; font-style: italic; font-weight: 500; letter-spacing: .14em; fill: #fff; opacity: .62; }
+
+.compass{ font-size:9px; font-weight:800; fill: #fff; letter-spacing:.04em; }
+.compass-line{ stroke: #fff; stroke-width:1; }
 
 .pin{ cursor: pointer; }
 .pin .pin-shape{ stroke: #fff; stroke-width: 1.4; filter: url(#pinShadow); transition: filter .16s ease; }
@@ -219,15 +227,15 @@ svg.map:active{ cursor: grabbing; }
 .loc.subsidiary .num{ background: var(--blue); }
 
 .loc .body{ min-width:0; flex:1; }
-.loc .name{ font-weight:700; font-size:13.5px; margin:0 0 3px; }
+.loc .name{ font-weight:700; font-size:16px; margin:0 0 3px; }
 .loc .pill{
     display:inline-block; font-size:9.5px; font-weight:800; letter-spacing:.05em; text-transform:uppercase;
     color: var(--blue); background: var(--blue-soft-strong); padding: 2px 7px; border-radius:5px; margin-bottom:5px;
 }
-.loc .addr{ font-size:12.5px; color: var(--ink-soft); line-height:1.45; margin:0 0 9px; }
+.loc .addr{ font-size:14px; color: var(--ink-soft); line-height:1.45; margin:0 0 9px; }
 .loc .row{ display:flex; gap:8px; flex-wrap:wrap; }
 .loc .btn{
-    font-size:11.5px; font-weight:700; text-decoration:none;
+    font-size:14px; font-weight:700; text-decoration:none;
     display:inline-flex; align-items:center; gap:5px;
     padding: 5px 10px; border-radius: 8px;
     color: var(--red); background: var(--red-soft-strong);
