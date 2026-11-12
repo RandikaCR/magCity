@@ -113,10 +113,14 @@
                 <div class="container">
                     <div class="text-center py-4">
                         <ul class="news-ticker">
+                            {{--<li class="text-uppercase font-34 text-white mb-0">Service and Running Repairs now in <span class="fw-bold">Galle</span></li>
                             <li class="text-uppercase font-34 text-white mb-0">Service and Running Repairs now in <span class="fw-bold">Galle</span></li>
                             <li class="text-uppercase font-34 text-white mb-0">Service and Running Repairs now in <span class="fw-bold">Galle</span></li>
-                            <li class="text-uppercase font-34 text-white mb-0">Service and Running Repairs now in <span class="fw-bold">Galle</span></li>
-                            <li class="text-uppercase font-34 text-white mb-0">Service and Running Repairs now in <span class="fw-bold">Galle</span></li>
+                            <li class="text-uppercase font-34 text-white mb-0">Service and Running Repairs now in <span class="fw-bold">Galle</span></li>--}}
+                            <li class="text-uppercase font-34 text-white mb-0">Now welcoming you in <span class="fw-bold">Negombo</span></li>
+                            <li class="text-uppercase font-34 text-white mb-0">Now welcoming you in <span class="fw-bold">Negombo</span></li>
+                            <li class="text-uppercase font-34 text-white mb-0">Now welcoming you in <span class="fw-bold">Negombo</span></li>
+                            <li class="text-uppercase font-34 text-white mb-0">Now welcoming you in <span class="fw-bold">Negombo</span></li>
                         </ul>
                         {{--<p class="text-uppercase font-34 text-white mb-0"> Service and Running Repairs now in <span class="fw-bold">Galle</span></p>--}}
                     </div>
@@ -188,18 +192,18 @@
 
                     <div class="row mt-5">
                         <div class="col-sm-4 mb-5">
-                            <a href="{{ url('/services#service-running-repairs') }}">
+                            <a href="{{ url('/services#vehicle-service') }}">
                                 <div class="card services-card">
                                     <div class="card-header p-0">
                                         <div class="widget-project-box">
                                             <div class="item">
-                                                <img src="{{ asset('assets/common/images/running-repairs-01.jpg') }}" alt="" class="img-fluid">
+                                                <img src="{{ asset('assets/common/images/services/p14.jpg') }}" alt="" class="img-fluid">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="card-body">
                                         <div class="text-center">
-                                            <p class="text-uppercase fw-bold mb-1 text-primary font-20">Running Repairs</p>
+                                            <p class="text-uppercase fw-bold mb-1 text-primary font-20">Vehicle Service</p>
                                         </div>
                                     </div>
                                 </div>
@@ -207,18 +211,18 @@
                         </div>
 
                         <div class="col-sm-4 mb-5">
-                            <a href="{{ url('/services#service-collision-repair') }}">
+                            <a href="{{ url('/services#atf-changing') }}">
                                 <div class="card services-card">
                                     <div class="card-header p-0">
                                         <div class="widget-project-box">
                                             <div class="item">
-                                                <img src="{{ asset('assets/common/images/collision-repairs-01.jpg') }}" alt="" class="img-fluid">
+                                                <img src="{{ asset('assets/common/images/services/p9.jpg') }}" alt="" class="img-fluid">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="card-body">
                                         <div class="text-center">
-                                            <p class="text-uppercase fw-bold mb-1 text-primary font-20">Collision Repair</p>
+                                            <p class="text-uppercase fw-bold mb-1 text-primary font-20">ATF Changing</p>
                                         </div>
                                     </div>
                                 </div>
@@ -226,18 +230,18 @@
                         </div>
 
                         <div class="col-sm-4 mb-5">
-                            <a href="{{ url('/services#service-vehicle-servicing') }}">
+                            <a href="{{ url('/services#tune-up') }}">
                                 <div class="card services-card">
                                     <div class="card-header p-0">
                                         <div class="widget-project-box">
                                             <div class="item">
-                                                <img src="{{ asset('assets/common/images/full-services.jpg') }}" alt="" class="img-fluid">
+                                                <img src="{{ asset('assets/common/images/services/p13.jpg') }}" alt="" class="img-fluid">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="card-body">
                                         <div class="text-center">
-                                            <p class="text-uppercase fw-bold mb-1 text-primary font-20">Full Service</p>
+                                            <p class="text-uppercase fw-bold mb-1 text-primary font-20">Vehicle Tune Up</p>
                                         </div>
                                     </div>
                                 </div>
@@ -245,18 +249,18 @@
                         </div>
 
                         <div class="col-sm-4 mb-5">
-                            <a href="{{ url('/services#service-tune-up') }}">
+                            <a href="{{ url('/services#brake-repairs') }}">
                                 <div class="card services-card">
                                     <div class="card-header p-0">
                                         <div class="widget-project-box">
                                             <div class="item">
-                                                <img src="{{ asset('assets/common/images/tune-up-01.jpg') }}" alt="" class="img-fluid">
+                                                <img src="{{ asset('assets/common/images/services/p4.jpg') }}" alt="" class="img-fluid">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="card-body">
                                         <div class="text-center">
-                                            <p class="text-uppercase fw-bold mb-1 text-primary font-20">Tune up</p>
+                                            <p class="text-uppercase fw-bold mb-1 text-primary font-20">Brake Repairs</p>
                                         </div>
                                     </div>
                                 </div>
@@ -264,18 +268,18 @@
                         </div>
 
                         <div class="col-sm-4 mb-5">
-                            <a href="{{ url('/services#service-accessories') }}">
+                            <a href="{{ url('/services#suspension-repairs') }}">
                                 <div class="card services-card">
                                     <div class="card-header p-0">
                                         <div class="widget-project-box">
                                             <div class="item">
-                                                <img src="{{ asset('assets/common/images/accessories-01.jpg') }}" alt="" class="img-fluid">
+                                                <img src="{{ asset('assets/common/images/services/p10.jpg') }}" alt="" class="img-fluid">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="card-body">
                                         <div class="text-center">
-                                            <p class="text-uppercase fw-bold mb-1 text-primary font-20">Accessories</p>
+                                            <p class="text-uppercase fw-bold mb-1 text-primary font-20">Suspension Repairs</p>
                                         </div>
                                     </div>
                                 </div>
@@ -283,18 +287,132 @@
                         </div>
 
                         <div class="col-sm-4 mb-5">
-                            <a href="{{ url('/services#service-vehicle-detailing') }}">
+                            <a href="{{ url('/services#engine-overhauls') }}">
                                 <div class="card services-card">
                                     <div class="card-header p-0">
                                         <div class="widget-project-box">
                                             <div class="item">
-                                                <img src="{{ asset('assets/common/images/vehicle-detailing-01.jpg') }}" alt="" class="img-fluid">
+                                                <img src="{{ asset('assets/common/images/services/p21.jpg') }}" alt="" class="img-fluid">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="card-body">
                                         <div class="text-center">
-                                            <p class="text-uppercase fw-bold mb-1 text-primary font-20">Vehicle detailing</p>
+                                            <p class="text-uppercase fw-bold mb-1 text-primary font-20">Engine Overhauls & Repairs</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-sm-4 mb-5">
+                            <a href="{{ url('/services#ac-repairs') }}">
+                                <div class="card services-card">
+                                    <div class="card-header p-0">
+                                        <div class="widget-project-box">
+                                            <div class="item">
+                                                <img src="{{ asset('assets/common/images/services/p19.jpg') }}" alt="" class="img-fluid">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="text-center">
+                                            <p class="text-uppercase fw-bold mb-1 text-primary font-20">A/C Repairs</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-sm-4 mb-5">
+                            <a href="{{ url('/services#electrical-repairs') }}">
+                                <div class="card services-card">
+                                    <div class="card-header p-0">
+                                        <div class="widget-project-box">
+                                            <div class="item">
+                                                <img src="{{ asset('assets/common/images/services/p20.jpg') }}" alt="" class="img-fluid">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="text-center">
+                                            <p class="text-uppercase fw-bold mb-1 text-primary font-20">Electrical Repairs</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-sm-4 mb-5">
+                            <a href="{{ url('/services#collision-repairs') }}">
+                                <div class="card services-card">
+                                    <div class="card-header p-0">
+                                        <div class="widget-project-box">
+                                            <div class="item">
+                                                <img src="{{ asset('assets/common/images/services/p2.jpg') }}" alt="" class="img-fluid">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="text-center">
+                                            <p class="text-uppercase fw-bold mb-1 text-primary font-20">Collision Repairs</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-sm-4 mb-5">
+                            <a href="{{ url('/services#wheel-alignment') }}">
+                                <div class="card services-card">
+                                    <div class="card-header p-0">
+                                        <div class="widget-project-box">
+                                            <div class="item">
+                                                <img src="{{ asset('assets/common/images/services/p16.jpg') }}" alt="" class="img-fluid">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="text-center">
+                                            <p class="text-uppercase fw-bold mb-1 text-primary font-20">Wheel Alignment</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-sm-4 mb-5">
+                            <a href="{{ url('/services#vehicle-detailing') }}">
+                                <div class="card services-card">
+                                    <div class="card-header p-0">
+                                        <div class="widget-project-box">
+                                            <div class="item">
+                                                <img src="{{ asset('assets/common/images/services/p6.jpg') }}" alt="" class="img-fluid">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="text-center">
+                                            <p class="text-uppercase fw-bold mb-1 text-primary font-20">Vehicle Detailing</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-sm-4 mb-5">
+                            <a href="{{ url('/services#accessories') }}">
+                                <div class="card services-card">
+                                    <div class="card-header p-0">
+                                        <div class="widget-project-box">
+                                            <div class="item">
+                                                <img src="{{ asset('assets/common/images/services/p1.jpg') }}" alt="" class="img-fluid">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="text-center">
+                                            <p class="text-uppercase fw-bold mb-1 text-primary font-20">Vehicle Accessories</p>
                                         </div>
                                     </div>
                                 </div>

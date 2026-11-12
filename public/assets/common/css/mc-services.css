@@ -312,7 +312,7 @@ section.sec{padding:96px 0}
 .sec.al{background:#eef3fc}
 .callout{box-shadow:0 20px 50px rgba(18,40,90,.1)}
 .onp a:hover{background:#e6eefb}
-.sw{display:block;overflow:visible;padding-top:18px;padding-bottom:6px}
+.sw{display:block;overflow:visible;padding-top:0;padding-bottom:0}
 .swt{display:flex;gap:4px;border-bottom:1px solid var(--line);margin-bottom:14px}
 .swt a{flex:1;text-align:center;padding:14px 10px;border:0;border-bottom:3px solid transparent;border-radius:0;font-weight:600;font-size:14px;text-transform:uppercase;color:var(--mut);transition:color .25s,border-color .25s,background .25s}
 .swt a:hover{color:var(--blue);background:#eef3fc}

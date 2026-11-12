@@ -22,25 +22,20 @@
 
     <div class="page-content">
 
-        @include('partials.frontend.inner-banner')
-
-        @include('partials.frontend.counters')
-
         <div class="bg-gradient-1">
             <div class="section-full">
                 <div class="container">
                     <div class="text-center py-4">
                         <ul class="news-ticker">
-                            <li class="text-uppercase font-34 text-white mb-0">Service and Running Repairs now in <span class="fw-bold">Galle</span></li>
-                            <li class="text-uppercase font-34 text-white mb-0">Service and Running Repairs now in <span class="fw-bold">Galle</span></li>
-                            <li class="text-uppercase font-34 text-white mb-0">Service and Running Repairs now in <span class="fw-bold">Galle</span></li>
-                            <li class="text-uppercase font-34 text-white mb-0">Service and Running Repairs now in <span class="fw-bold">Galle</span></li>
+                            <li class="text-uppercase font-34 text-white mb-0">Now welcoming you in <span class="fw-bold">Negombo</span></li>
+                            <li class="text-uppercase font-34 text-white mb-0">Now welcoming you in <span class="fw-bold">Negombo</span></li>
+                            <li class="text-uppercase font-34 text-white mb-0">Now welcoming you in <span class="fw-bold">Negombo</span></li>
+                            <li class="text-uppercase font-34 text-white mb-0">Now welcoming you in <span class="fw-bold">Negombo</span></li>
                         </ul>
-                        {{--<p class="text-uppercase font-34 text-white mb-0"> Service and Running Repairs now in <span class="fw-bold">Galle</span></p>--}}
                     </div>
                 </div>
             </div>
-            <div class="section-full bg-white pt-5">
+            <div class="section-full bg-white pb-5">
             </div>
         </div>
 
