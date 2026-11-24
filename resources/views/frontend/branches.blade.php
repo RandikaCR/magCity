@@ -19,6 +19,17 @@
 
         @include('partials.frontend.inner-banner')
 
+        <!-- Breadcrumb  row -->
+        <div class="breadcrumb-row">
+            <div class="container d-flex justify-content-end">
+                <ul class="list-inline">
+                    <li><a href="{{ url('/') }}">Home</a></li>
+                    <li>Branches</li>
+                </ul>
+            </div>
+        </div>
+        <!-- Breadcrumb  row END -->
+
         <div class="bg-gradient-1">
             <div class="section-full">
                 <div class="container">
@@ -185,7 +196,7 @@
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-sm-3">
-                                    <div class="dlab-thu m"><img src="{{ asset('assets/common/images/branch-head-office.jpg') }}" alt=""></div>
+                                    <div class="dlab-thu m"><img src="{{ asset('assets/common/images/branch-head-office.jpg') }}" alt="Magcity - Colombo (Head office)"></div>
                                 </div>
                                 <div class="col-sm-5">
                                     <p class="text-uppercase font-20 mt-3 mt-sm-0 fw-bold mb-4 text-primary">Colombo (Head office)</p>
@@ -215,7 +226,7 @@
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-sm-3">
-                                    <div class="dlab-thu m"><img src="{{ asset('assets/common/images/branch-galle.jpg') }}" alt=""></div>
+                                    <div class="dlab-thu m"><img src="{{ asset('assets/common/images/branch-galle.jpg') }}" alt="Magcity - Galle"></div>
                                 </div>
                                 <div class="col-sm-5">
                                     <p class="text-uppercase font-20 mt-3 mt-sm-0 fw-bold mb-4 text-primary">Galle</p>
@@ -245,7 +256,7 @@
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-sm-3">
-                                    <div class="dlab-thu m"><img src="{{ asset('assets/common/images/branch-nugegoda.jpg') }}" alt=""></div>
+                                    <div class="dlab-thu m"><img src="{{ asset('assets/common/images/branch-nugegoda.jpg') }}" alt="Magcity - Nugegoda"></div>
                                 </div>
                                 <div class="col-sm-5">
                                     <p class="text-uppercase font-20 mt-3 mt-sm-0 fw-bold mb-4 text-primary">Nugegoda</p>
@@ -275,7 +286,7 @@
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-sm-3">
-                                    <div class="dlab-thu m"><img src="{{ asset('assets/common/images/branch-ratmalana.jpg') }}" alt=""></div>
+                                    <div class="dlab-thu m"><img src="{{ asset('assets/common/images/branch-ratmalana.jpg') }}" alt="Magcity - Ratmalana"></div>
                                 </div>
                                 <div class="col-sm-5">
                                     <p class="text-uppercase font-20 mt-3 mt-sm-0 fw-bold mb-4 text-primary">Ratmalana</p>
@@ -305,7 +316,7 @@
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-sm-3">
-                                    <div class="dlab-thu m"><img src="{{ asset('assets/common/images/branch-gatambe.jpg') }}" alt=""></div>
+                                    <div class="dlab-thu m"><img src="{{ asset('assets/common/images/branch-gatambe.jpg') }}" alt="Magcity - Gatambe"></div>
                                 </div>
                                 <div class="col-sm-5">
                                     <p class="text-uppercase font-20 mt-3 mt-sm-0 fw-bold mb-4 text-primary">Gatambe</p>
@@ -329,6 +340,36 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <div class="dlab-thu m"><img src="{{ asset('assets/common/images/branch-nugegoda.jpg') }}" alt="Magcity - Negombo"></div>
+                                    </div>
+                                    <div class="col-sm-5">
+                                        <p class="text-uppercase font-20 mt-3 mt-sm-0 fw-bold mb-4 text-primary">Negombo</p>
+                                        <p class="font-16 mb-2 fw-medium">
+                                            <i class="ti-location-pin me-3"></i>
+                                            344, Old Kottawa road, Nugegoda, 10250, Sri Lanka
+                                        </p>
+                                        <p class="font-16 mb-2 fw-medium">
+                                            <i class="ti-email me-3"></i>
+                                            <a href="mailto:nugegoda@magcitylk.com">nugegoda@magcitylk.com</a>
+                                        </p>
+                                        <p class="font-16 mb-0 fw-medium">
+                                            <i class="ti-mobile me-3"></i>
+                                            <a href="tel:+94112199799">0112199799</a>
+                                        </p>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="mt-3 mt-sm-0">
+                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.2027645239455!2d79.908679376203!3d6.866288919082461!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25b5c8629ad7d%3A0xeb578bf49153ce1d!2sMag%20City%20Nugegoda!5e0!3m2!1sen!2sus!4v1784743603001!5m2!1sen!2sus" style="border:0; width:100%; height:180px;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="row">
@@ -344,7 +385,7 @@
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-sm-3">
-                                    <div class="dlab-thu m"><img src="{{ asset('assets/common/images/branch-kandy.jpg') }}" alt=""></div>
+                                    <div class="dlab-thu m"><img src="{{ asset('assets/common/images/branch-kandy.jpg') }}" alt="Magcity - CARS Body Shop - Kandy"></div>
                                 </div>
                                 <div class="col-sm-5">
                                     <p class="text-uppercase font-20 mt-3 mt-sm-0 fw-bold mb-4 text-primary">CARS Body Shop - Kandy</p>
@@ -374,7 +415,7 @@
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-sm-3">
-                                    <div class="dlab-thu m"><img src="{{ asset('assets/common/images/branch-pallekale.jpg') }}" alt=""></div>
+                                    <div class="dlab-thu m"><img src="{{ asset('assets/common/images/branch-pallekale.jpg') }}" alt="Magcity - CARS Body Shop - Pallekele"></div>
                                 </div>
                                 <div class="col-sm-5">
                                     <p class="text-uppercase font-20 mt-3 mt-sm-0 fw-bold mb-4 text-primary">CARS Body Shop - Pallekele</p>
@@ -424,8 +465,9 @@
             { id:3, name:"Ratmalana", type:"main", x:63.42, y:412.77, addr:"652, Galle Road, Ratmalana 10390", phone:"+94 11 262 6333", email:"ratmalana@magcitylk.com" },
             { id:4, name:"Galle", type:"main", x:108.84, y:518.83, addr:"4, Hirimbura Cross Road, Galle 80000", phone:"+94 91 222 8388", email:"galle@magcitylk.com" },
             { id:5, name:"Gatambe", type:"main", x:150.84, y:355.83, addr:"964, Peradeniya Road, Gatambe 20000", phone:"+94 81 238 8699", email:"gatambe@magcitylk.com" },
-            { id:6, name:"Kandy — CARS Body Shop", type:"subsidiary", x:162.38, y:350.59, addr:"04, William Gopallawa Mawatha, Kandy 20000", phone:"+94 71 585 3092", email:"carskandy@carsbodyshoplk.com" },
-            { id:7, name:"Pallekele — CARS Body Shop", type:"subsidiary", x:171.78, y:351.68, addr:"125, Kandy Industrial Zone, Pallekele 60622", phone:"+94 76 825 6645", email:"carspallekele@carsbodyshoplk.com" },
+            { id:6, name:"Negombo", type:"main", x:60.84, y:355.83, addr:"964, Address Required 20000", phone:"+94 81 238 8699", email:"negombo@magcitylk.com" },
+            { id:7, name:"Kandy — CARS Body Shop", type:"subsidiary", x:162.38, y:350.59, addr:"04, William Gopallawa Mawatha, Kandy 20000", phone:"+94 71 585 3092", email:"carskandy@carsbodyshoplk.com" },
+            { id:8, name:"Pallekele — CARS Body Shop", type:"subsidiary", x:171.78, y:351.68, addr:"125, Kandy Industrial Zone, Pallekele 60622", phone:"+94 76 825 6645", email:"carspallekele@carsbodyshoplk.com" },
         ];
 
         const PIN_D = "M12 0C5.4 0 0 5.4 0 12c0 9 12 20 12 20s12-11 12-20C24 5.4 18.6 0 12 0z";

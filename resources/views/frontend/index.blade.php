@@ -197,7 +197,7 @@
                                     <div class="card-header p-0">
                                         <div class="widget-project-box">
                                             <div class="item">
-                                                <img src="{{ asset('assets/common/images/services/p14.jpg') }}" alt="" class="img-fluid">
+                                                <img src="{{ asset('assets/common/images/services/p14.jpg') }}" alt="Vehicle Service" class="img-fluid">
                                             </div>
                                         </div>
                                     </div>
@@ -216,7 +216,7 @@
                                     <div class="card-header p-0">
                                         <div class="widget-project-box">
                                             <div class="item">
-                                                <img src="{{ asset('assets/common/images/services/p9.jpg') }}" alt="" class="img-fluid">
+                                                <img src="{{ asset('assets/common/images/services/p9.jpg') }}" alt="ATF Changing" class="img-fluid">
                                             </div>
                                         </div>
                                     </div>
@@ -235,7 +235,7 @@
                                     <div class="card-header p-0">
                                         <div class="widget-project-box">
                                             <div class="item">
-                                                <img src="{{ asset('assets/common/images/services/p13.jpg') }}" alt="" class="img-fluid">
+                                                <img src="{{ asset('assets/common/images/services/p13.jpg') }}" alt="Vehicle Tune Up" class="img-fluid">
                                             </div>
                                         </div>
                                     </div>
@@ -254,7 +254,7 @@
                                     <div class="card-header p-0">
                                         <div class="widget-project-box">
                                             <div class="item">
-                                                <img src="{{ asset('assets/common/images/services/p4.jpg') }}" alt="" class="img-fluid">
+                                                <img src="{{ asset('assets/common/images/services/p4.jpg') }}" alt="Brake Repairs" class="img-fluid">
                                             </div>
                                         </div>
                                     </div>
@@ -273,7 +273,7 @@
                                     <div class="card-header p-0">
                                         <div class="widget-project-box">
                                             <div class="item">
-                                                <img src="{{ asset('assets/common/images/services/p10.jpg') }}" alt="" class="img-fluid">
+                                                <img src="{{ asset('assets/common/images/services/p10.jpg') }}" alt="Suspension Repairs" class="img-fluid">
                                             </div>
                                         </div>
                                     </div>
@@ -292,7 +292,7 @@
                                     <div class="card-header p-0">
                                         <div class="widget-project-box">
                                             <div class="item">
-                                                <img src="{{ asset('assets/common/images/services/p21.jpg') }}" alt="" class="img-fluid">
+                                                <img src="{{ asset('assets/common/images/services/p21.jpg') }}" alt="Engine Overhauls & Repairs" class="img-fluid">
                                             </div>
                                         </div>
                                     </div>
@@ -311,7 +311,7 @@
                                     <div class="card-header p-0">
                                         <div class="widget-project-box">
                                             <div class="item">
-                                                <img src="{{ asset('assets/common/images/services/p19.jpg') }}" alt="" class="img-fluid">
+                                                <img src="{{ asset('assets/common/images/services/p19.jpg') }}" alt="A/C Repairs" class="img-fluid">
                                             </div>
                                         </div>
                                     </div>
@@ -330,7 +330,7 @@
                                     <div class="card-header p-0">
                                         <div class="widget-project-box">
                                             <div class="item">
-                                                <img src="{{ asset('assets/common/images/services/p20.jpg') }}" alt="" class="img-fluid">
+                                                <img src="{{ asset('assets/common/images/services/p20.jpg') }}" alt="Electrical Repairs" class="img-fluid">
                                             </div>
                                         </div>
                                     </div>
@@ -349,7 +349,7 @@
                                     <div class="card-header p-0">
                                         <div class="widget-project-box">
                                             <div class="item">
-                                                <img src="{{ asset('assets/common/images/services/p2.jpg') }}" alt="" class="img-fluid">
+                                                <img src="{{ asset('assets/common/images/services/p2.jpg') }}" alt="Collision Repairs" class="img-fluid">
                                             </div>
                                         </div>
                                     </div>
@@ -368,7 +368,7 @@
                                     <div class="card-header p-0">
                                         <div class="widget-project-box">
                                             <div class="item">
-                                                <img src="{{ asset('assets/common/images/services/p16.jpg') }}" alt="" class="img-fluid">
+                                                <img src="{{ asset('assets/common/images/services/p16.jpg') }}" alt="Wheel Alignment" class="img-fluid">
                                             </div>
                                         </div>
                                     </div>
@@ -387,7 +387,7 @@
                                     <div class="card-header p-0">
                                         <div class="widget-project-box">
                                             <div class="item">
-                                                <img src="{{ asset('assets/common/images/services/p6.jpg') }}" alt="" class="img-fluid">
+                                                <img src="{{ asset('assets/common/images/services/p6.jpg') }}" alt="Vehicle Detailing" class="img-fluid">
                                             </div>
                                         </div>
                                     </div>
@@ -406,7 +406,7 @@
                                     <div class="card-header p-0">
                                         <div class="widget-project-box">
                                             <div class="item">
-                                                <img src="{{ asset('assets/common/images/services/p1.jpg') }}" alt="" class="img-fluid">
+                                                <img src="{{ asset('assets/common/images/services/p1.jpg') }}" alt="Vehicle Accessories" class="img-fluid">
                                             </div>
                                         </div>
                                     </div>

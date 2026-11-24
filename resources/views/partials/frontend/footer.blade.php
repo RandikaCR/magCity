@@ -7,7 +7,7 @@
             <div class="row">
                 <div class="col-lg-3 col-md-12 footer-col-4">
                     <div class="widget widget_about d-flex flex-wrap justify-content-center text-center px-4">
-                        <div class="logo-footer logo-white"><img src="{{ asset('assets/common/images/logo-dark.png') }}" alt=""></div>
+                        <div class="logo-footer logo-white"><img src="{{ asset('assets/common/images/logo-dark.png') }}" alt="Magcity"></div>
                         <p>Precision, Technology and experties come together to deliver the highest standard of automotive care.</p>
                     </div>
                 </div>
@@ -17,12 +17,18 @@
                             <div class="widget widget_services">
                                 <h4 class="m-b15 text-uppercase">services</h4>
                                 <ul>
-                                    <li><a href="javascript:void(0);">Running Repairs</a></li>
-                                    <li><a href="javascript:void(0);">Collision Repairs</a></li>
-                                    <li><a href="javascript:void(0);">Full Service</a></li>
-                                    <li><a href="javascript:void(0);">Tune Up's</a></li>
-                                    <li><a href="javascript:void(0);">Vehicle Accessories</a></li>
-                                    <li><a href="javascript:void(0);">Vehicle Detailing</a></li>
+                                    <li><a href="{{ url('/services#vehicle-service') }}">Vehicle Service</a></li>
+                                    <li><a href="{{ url('/services#atf-changing') }}">ATF Changing</a></li>
+                                    <li><a href="{{ url('/services#tune-up') }}">Vehicle Tune Up</a></li>
+                                    <li><a href="{{ url('/services#brake-repairs') }}">Brake Repairs</a></li>
+                                    <li><a href="{{ url('/services#suspension-repairs') }}">Suspension Repairs</a></li>
+                                    <li><a href="{{ url('/services#engine-overhauls') }}">Engine Overhauls & Repairs</a></li>
+                                    <li><a href="{{ url('/services#ac-repairs') }}">A/C Repairs</a></li>
+                                    <li><a href="{{ url('/services#electrical-repairs') }}">Electrical Repairs</a></li>
+                                    <li><a href="{{ url('/services#collision-repairs') }}">Collision Repairs</a></li>
+                                    <li><a href="{{ url('/services#wheel-alignment') }}">Wheel Alignment</a></li>
+                                    <li><a href="{{ url('/services#vehicle-detailing') }}">Vehicle Detailing</a></li>
+                                    <li><a href="{{ url('/services#accessories') }}">Vehicle Accessories</a></li>
                                 </ul>
                             </div>
                         </div>

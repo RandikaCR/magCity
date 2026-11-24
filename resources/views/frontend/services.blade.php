@@ -19,8 +19,20 @@
 @endsection
 
 @section('content')
+    <h1 class="d-none">{{ $pageTitle }}</h1>
 
     <div class="page-content">
+
+        <!-- Breadcrumb  row -->
+        <div class="breadcrumb-row">
+            <div class="container d-flex justify-content-end">
+                <ul class="list-inline">
+                    <li><a href="{{ url('/') }}">Home</a></li>
+                    <li>Services</li>
+                </ul>
+            </div>
+        </div>
+        <!-- Breadcrumb  row END -->
 
         <div class="bg-gradient-1">
             <div class="section-full">

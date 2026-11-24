@@ -27,6 +27,17 @@
 
         @include('partials.frontend.inner-banner')
 
+        <!-- Breadcrumb  row -->
+        <div class="breadcrumb-row">
+            <div class="container d-flex justify-content-end">
+                <ul class="list-inline">
+                    <li><a href="{{ url('/') }}">Home</a></li>
+                    <li>Blogs</li>
+                </ul>
+            </div>
+        </div>
+        <!-- Breadcrumb  row END -->
+
         <div class="bg-gradient-1">
             <div class="section-full">
                 <div class="container">
@@ -49,7 +60,7 @@
                                 <div class="post card-container col-xl-4 col-lg-6 col-md-6 col-sm-12">
                                     <div class="blog-post blog-grid blog-rounded blog-effect1">
                                         <div class="dlab-post-media dlab-img-effect">
-                                            <a href="{{ url('blog/' . $blog->slug) }}"><img src="{{ asset('assets/common/images/blogs/' .$blog->primary_image) }}" alt=""></a>
+                                            <a href="{{ url('blog/' . $blog->slug) }}"><img src="{{ asset('assets/common/images/blogs/' .$blog->primary_image) }}" alt="{{ $blog->title }}"></a>
                                         </div>
                                         <div class="dlab-info p-a20 border-1">
                                             <div class="dlab-post-title">

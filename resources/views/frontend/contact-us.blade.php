@@ -18,6 +18,17 @@
 
         @include('partials.frontend.inner-banner')
 
+        <!-- Breadcrumb  row -->
+        <div class="breadcrumb-row">
+            <div class="container d-flex justify-content-end">
+                <ul class="list-inline">
+                    <li><a href="{{ url('/') }}">Home</a></li>
+                    <li>Contact Us</li>
+                </ul>
+            </div>
+        </div>
+        <!-- Breadcrumb  row END -->
+
 
         <div class="section-full content-inner bg-white contact-style-1">
             <div class="container">

@@ -1,6 +1,6 @@
 @extends('layouts.frontend')
 @php
-    $pageTitle = 'Services';
+    $pageTitle = $blog->title;
 @endphp
 @section('page_title')
     {{ $pageTitle }}
@@ -23,6 +23,18 @@
 
         @include('partials.frontend.inner-banner')
 
+        <!-- Breadcrumb  row -->
+        <div class="breadcrumb-row">
+            <div class="container d-flex justify-content-end">
+                <ul class="list-inline">
+                    <li><a href="{{ url('/') }}">Home</a></li>
+                    <li><a href="{{ url('/blog') }}">Blogs</a></li>
+                    <li>{{ $blog->title }}</li>
+                </ul>
+            </div>
+        </div>
+        <!-- Breadcrumb  row END -->
+
         <div class="content-area">
             <div class="container">
                 <div class="row">
@@ -39,7 +51,7 @@
                                     <div class="widget-project-box owl-none owl-loaded owl-theme owl-carousel dots-style-1 owl-dots-black-full">
                                         @foreach($images as $image)
                                             <div class="item">
-                                                <img src="{{ asset('assets/common/images/blogs/' . $image->image) }}" alt="{{ $blog->title }}" class="rounded-1">
+                                                <img src="{{ asset('assets/common/images/blogs/' . $image->image) }}" alt="{{ $blog->title }}" alt="{{ $blog->title }}" class="rounded-1">
                                             </div>
                                         @endforeach
                                     </div>

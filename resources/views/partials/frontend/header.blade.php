@@ -22,7 +22,7 @@
         <div class="main-bar bg-primary clearfix ">
             <div class="container clearfix">
                 <!-- website logo -->
-                <div class="logo-header logo-white mostion"><a href="{{ url('/') }}" style="padding: 5px 0 10px;"><img src="{{ asset('assets/common/images/logo-white.png') }}" width="130" alt="" style="width: 130px;"></a></div>
+                <div class="logo-header logo-white mostion"><a href="{{ url('/') }}" style="padding: 5px 0 10px;"><img src="{{ asset('assets/common/images/logo-white.png') }}" alt="Magcity" width="130" style="width: 130px;"></a></div>
                 <!-- nav toggle button -->
                 <button class="navbar-toggler collapsed navicon justify-content-end" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span></span>
