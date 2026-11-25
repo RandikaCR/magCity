@@ -242,7 +242,7 @@ rel:["Vehicle Detailing|Inside and out.","Running Repairs|Wheel alignment and mo
     var nav = function (cls) { return NV.map(function (n) { return "<a href='#" + n[0] + "' data-go='" + n[0] + "' data-t='" + n[0] + "'>" + (cls === 'rail' ? '<span>' + n[1] + '</span>' : n[1]) + '</a>'; }).join(''); };
     var two = function (a) { return p(a); };
     A.innerHTML =
-      "<section class='hero2'><div class='w h2g'><div><div class='bc'><a href='/'>Home</a> › <a data-r href='" + href('services') + "'>Services</a> › " + s.bc + ' › ' + s.t + '</div><h1>' + s.t + "</h1><p class='lead'>" + s.d + "</p><p><a class='btn' " + ext(CFG.book) + '>' + s.btn + " →</a><a class='lnk' href='#loc' data-go='loc'>Find a Location →</a></p></div><div class='hph'>" + ph(s.t, pics[0], true) + '</div></div></section>' +
+      "<section class='hero2'><div class='w h2g'><div>" + '<h1>' + s.t + "</h1><p class='lead'>" + s.d + "</p><p><a class='btn' " + ext(CFG.book) + '>' + s.btn + " →</a><a class='lnk' href='#loc' data-go='loc'>Find a Location →</a></p></div><div class='hph'>" + ph(s.t, pics[0], true) + '</div></div></section>' +
       "<div class='w'><div class='bens'>" + s.ben.map(function (b, i) { return '<div>' + BS[i] + '<b>' + b + '</b></div>'; }).join('') + '</div></div>' +
       "<nav class='onp' aria-label='On this page'><div class='w onpi'>" + nav('onp') + '</div></nav>' +
       "<nav class='rail' aria-label='On this page'>" + nav('rail') + "</nav><div class='prog'><i></i></div>" +

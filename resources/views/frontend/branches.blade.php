@@ -351,20 +351,20 @@
                                         <p class="text-uppercase font-20 mt-3 mt-sm-0 fw-bold mb-4 text-primary">Negombo</p>
                                         <p class="font-16 mb-2 fw-medium">
                                             <i class="ti-location-pin me-3"></i>
-                                            344, Old Kottawa road, Nugegoda, 10250, Sri Lanka
+                                            732 Colombo - Puttalam Rd, Negombo 11500
                                         </p>
                                         <p class="font-16 mb-2 fw-medium">
                                             <i class="ti-email me-3"></i>
-                                            <a href="mailto:nugegoda@magcitylk.com">nugegoda@magcitylk.com</a>
+                                            <a href="mailto:negombo@magcitylk.com">negombo@magcitylk.com</a>
                                         </p>
                                         <p class="font-16 mb-0 fw-medium">
                                             <i class="ti-mobile me-3"></i>
-                                            <a href="tel:+94112199799">0112199799</a>
+                                            <a href="tel:+94744153678">0744153678</a>
                                         </p>
                                     </div>
                                     <div class="col-sm-4">
                                         <div class="mt-3 mt-sm-0">
-                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.2027645239455!2d79.908679376203!3d6.866288919082461!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25b5c8629ad7d%3A0xeb578bf49153ce1d!2sMag%20City%20Nugegoda!5e0!3m2!1sen!2sus!4v1784743603001!5m2!1sen!2sus" style="border:0; width:100%; height:180px;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.4647902226448!2d79.85657351165139!3d7.1876861927875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2ef73423f0329%3A0xd4092f267963ee3d!2sMag%20City%20Negombo!5e0!3m2!1sen!2slk!4v1795594344992!5m2!1sen!2slk"  style="border:0; width:100%; height:180px;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
                                         </div>
                                     </div>
                                 </div>
@@ -465,7 +465,7 @@
             { id:3, name:"Ratmalana", type:"main", x:63.42, y:412.77, addr:"652, Galle Road, Ratmalana 10390", phone:"+94 11 262 6333", email:"ratmalana@magcitylk.com" },
             { id:4, name:"Galle", type:"main", x:108.84, y:518.83, addr:"4, Hirimbura Cross Road, Galle 80000", phone:"+94 91 222 8388", email:"galle@magcitylk.com" },
             { id:5, name:"Gatambe", type:"main", x:150.84, y:355.83, addr:"964, Peradeniya Road, Gatambe 20000", phone:"+94 81 238 8699", email:"gatambe@magcitylk.com" },
-            { id:6, name:"Negombo", type:"main", x:60.84, y:355.83, addr:"964, Address Required 20000", phone:"+94 81 238 8699", email:"negombo@magcitylk.com" },
+            { id:6, name:"Negombo", type:"main", x:60.84, y:355.83, addr:"732 Colombo - Puttalam Rd, Negombo 11500", phone:"+94 74 415 3678", email:"negombo@magcitylk.com" },
             { id:7, name:"Kandy — CARS Body Shop", type:"subsidiary", x:162.38, y:350.59, addr:"04, William Gopallawa Mawatha, Kandy 20000", phone:"+94 71 585 3092", email:"carskandy@carsbodyshoplk.com" },
             { id:8, name:"Pallekele — CARS Body Shop", type:"subsidiary", x:171.78, y:351.68, addr:"125, Kandy Industrial Zone, Pallekele 60622", phone:"+94 76 825 6645", email:"carspallekele@carsbodyshoplk.com" },
         ];

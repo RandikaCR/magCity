@@ -68,6 +68,7 @@ $rand = rand(1,9999);
     .news-ticker li {
         height: 30px;
         line-height: 30px;
+        font-size: 34px;
     }
 
     .theme-header-border-bottom{
@@ -179,6 +180,12 @@ $rand = rand(1,9999);
         .counter-item-text-bottom{
             font-size: 14px;
             line-height: 20px;
+        }
+
+        .news-ticker li {
+            height: 30px;
+            line-height: 30px;
+            font-size: 20px;
         }
     }
 
