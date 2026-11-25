@@ -345,7 +345,7 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-sm-3">
-                                        <div class="dlab-thu m"><img src="{{ asset('assets/common/images/branch-nugegoda.jpg') }}" alt="Magcity - Negombo"></div>
+                                        <div class="dlab-thu m"><img src="{{ asset('assets/common/images/branch-negombo.jpg') }}" alt="Magcity - Negombo"></div>
                                     </div>
                                     <div class="col-sm-5">
                                         <p class="text-uppercase font-20 mt-3 mt-sm-0 fw-bold mb-4 text-primary">Negombo</p>
